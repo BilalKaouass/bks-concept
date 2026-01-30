@@ -300,3 +300,23 @@ body.loaded::before {
   80% { transform: translate(2px, -2px); }
   100% { transform: translate(0); }
 }
+/* RESPONSIVE FIXES */
+@layer utilities {
+  /* Empêche le texte de déborder */
+  .break-word {
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    hyphens: auto;
+  }
+  
+  /* Taille de texte responsive */
+  .text-responsive {
+    font-size: clamp(1rem, 2vw, 1.25rem);
+  }
+  
+  /* Padding responsive */
+  .section-padding {
+    padding-left: max(1rem, 5vw);
+    padding-right: max(1rem, 5vw);
+  }
+}
