@@ -138,7 +138,9 @@ function initMobileMenu() {
   }
 }
 
-// Animation du formulaire de contact
+// Netlify gère maintenant le formulaire, donc on désactive notre JS
+// Le formulaire est désormais géré par Netlify Forms
+/*
 document.addEventListener('DOMContentLoaded', function() {
   const contactForm = document.getElementById('contact-form');
   
@@ -177,6 +179,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }
 });
+*/
 
 // ANIMATIONS "WAOW"
 function animateTitles() {

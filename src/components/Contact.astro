@@ -14,16 +14,29 @@ import { motion } from 'framer-motion';
     </div>
 
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
-      <!-- Formulaire -->
+      <!-- Formulaire avec Netlify Forms -->
       <div class="card bg-base-200 shadow-xl">
         <div class="card-body p-8">
-          <form id="contact-form" class="space-y-6">
+          <form 
+            name="contact"
+            method="POST"
+            data-netlify="true"
+            data-netlify-honeypot="bot-field"
+            class="space-y-6"
+          >
+            <!-- Champs cachés Netlify -->
+            <input type="hidden" name="form-name" value="contact" />
+            <div class="hidden">
+              <label>Ne remplissez pas ce champ: <input name="bot-field" /></label>
+            </div>
+
             <div class="form-control">
               <label class="label">
                 <span class="label-text text-lg">Votre nom complet *</span>
               </label>
               <input 
                 type="text" 
+                name="nom_complet"
                 placeholder="John Doe" 
                 class="input input-bordered input-lg bg-base-100"
                 required
@@ -36,6 +49,7 @@ import { motion } from 'framer-motion';
               </label>
               <input 
                 type="email" 
+                name="email"
                 placeholder="contact@entreprise.fr" 
                 class="input input-bordered input-lg bg-base-100"
                 required
@@ -48,7 +62,8 @@ import { motion } from 'framer-motion';
               </label>
               <input 
                 type="tel" 
-                placeholder="+33 1 23 45 67 89" 
+                name="telephone"
+                placeholder="+32 4 84 24 36 46" 
                 class="input input-bordered input-lg bg-base-100"
               />
             </div>
@@ -57,13 +72,13 @@ import { motion } from 'framer-motion';
               <label class="label">
                 <span class="label-text text-lg">Type de projet *</span>
               </label>
-              <select class="select select-bordered select-lg bg-base-100" required>
+              <select name="type_projet" class="select select-bordered select-lg bg-base-100" required>
                 <option disabled selected>Choisissez une option</option>
-                <option>Site web vitrine</option>
-                <option>Site e-commerce</option>
-                <option>Application web</option>
-                <option>Refonte de site</option>
-                <option>Autre</option>
+                <option value="Site vitrine">Site web vitrine</option>
+                <option value="E-commerce">Site e-commerce</option>
+                <option value="Application web">Application web</option>
+                <option value="Refonte">Refonte de site</option>
+                <option value="Autre">Autre</option>
               </select>
             </div>
 
@@ -71,13 +86,13 @@ import { motion } from 'framer-motion';
               <label class="label">
                 <span class="label-text text-lg">Budget estimé *</span>
               </label>
-              <select class="select select-bordered select-lg bg-base-100" required>
+              <select name="budget" class="select select-bordered select-lg bg-base-100" required>
                 <option disabled selected>Choisissez une fourchette</option>
-                <option>1 000€ - 3 000€</option>
-                <option>3 000€ - 6 000€</option>
-                <option>6 000€ - 10 000€</option>
-                <option>10 000€ - 20 000€</option>
-                <option>20 000€+</option>
+                <option value="1000-3000">1 000€ - 3 000€</option>
+                <option value="3000-6000">3 000€ - 6 000€</option>
+                <option value="6000-10000">6 000€ - 10 000€</option>
+                <option value="10000-20000">10 000€ - 20 000€</option>
+                <option value="20000+">20 000€+</option>
               </select>
             </div>
 
@@ -86,6 +101,7 @@ import { motion } from 'framer-motion';
                 <span class="label-text text-lg">Décrivez votre projet *</span>
               </label>
               <textarea 
+                name="message"
                 class="textarea textarea-bordered textarea-lg bg-base-100 h-40" 
                 placeholder="Parlez-nous de votre projet, vos objectifs, vos délais..."
                 required
@@ -99,6 +115,13 @@ import { motion } from 'framer-motion';
               </button>
             </div>
           </form>
+          
+          <!-- Message de succès caché pour Netlify -->
+          <div class="hidden" data-netlify-success="true">
+            <div class="alert alert-success mt-6">
+              <span>✅ Message envoyé avec succès ! Nous vous répondrons dans les 24h.</span>
+            </div>
+          </div>
         </div>
       </div>
 
