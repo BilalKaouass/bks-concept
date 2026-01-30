@@ -9,11 +9,13 @@ const navItems = [
 ---
 
 <header class="sticky top-0 z-50 backdrop-blur-md bg-base-100/80 border-b border-base-300">
-  <div class="container mx-auto px-4">
-    <div class="navbar">
+  <div class="container mx-auto px-3 sm:px-4">
+    <div class="navbar py-2 sm:py-3">
+      <!-- Début navbar -->
       <div class="navbar-start">
+        <!-- Menu mobile -->
         <div class="dropdown">
-          <label tabindex="0" class="btn btn-ghost lg:hidden">
+          <label tabindex="0" class="btn btn-ghost btn-circle lg:hidden">
             <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" />
             </svg>
@@ -24,22 +26,39 @@ const navItems = [
             ))}
           </ul>
         </div>
-        <!-- LOGO UNIQUE ICI -->
-        <a class="btn btn-ghost text-xl logo-glitch" href="/">
-          <span class="font-bold text-primary">BKS</span>
-          <span class="font-light">Concept</span>
+        
+        <!-- Logo - Taille responsive -->
+        <a class="btn btn-ghost p-1 sm:p-2" href="/">
+          <span class="text-lg sm:text-xl font-bold text-primary">BKS</span>
+          <span class="text-lg sm:text-xl font-light hidden sm:inline">Concept</span>
+          <span class="text-lg sm:text-xl font-light sm:hidden">C</span>
         </a>
       </div>
+      
+      <!-- Menu desktop (centré) -->
       <div class="navbar-center hidden lg:flex">
-        <ul class="menu menu-horizontal px-1">
+        <ul class="menu menu-horizontal gap-1">
           {navItems.map(item => (
-            <li><a href={item.href} class="hover:text-primary transition-colors">{item.name}</a></li>
+            <li>
+              <a 
+                href={item.href} 
+                class="px-3 py-2 text-sm lg:text-base hover:text-primary transition-colors"
+              >
+                {item.name}
+              </a>
+            </li>
           ))}
         </ul>
       </div>
+      
+      <!-- Bouton CTA - Responsive -->
       <div class="navbar-end">
-        <a href="/contact" class="btn btn-primary btn-lg btn-wave">
-          Demander un devis
+        <a 
+          href="/contact" 
+          class="btn btn-primary btn-sm sm:btn-md rounded-full px-3 sm:px-6 text-xs sm:text-sm"
+        >
+          <span class="hidden xs:inline">Demander</span>
+          <span class="xs:hidden">Devis</span>
         </a>
       </div>
     </div>
