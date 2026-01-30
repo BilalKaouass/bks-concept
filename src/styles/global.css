@@ -1,0 +1,302 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Styles personnalisés */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    font-family: 'Inter', sans-serif;
+  }
+}
+
+@layer components {
+  .text-gradient {
+    background: linear-gradient(90deg, #3B82F6, #8B5CF6, #EC4899);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  
+  .btn-gradient {
+    background: linear-gradient(90deg, #3B82F6, #8B5CF6);
+    color: white;
+    border: none;
+  }
+  
+  .btn-gradient:hover {
+    background: linear-gradient(90deg, #2563EB, #7C3AED);
+  }
+}
+
+/* Animations */
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-20px); }
+}
+
+@keyframes blob {
+  0% { transform: translate(0px, 0px) scale(1); }
+  33% { transform: translate(30px, -50px) scale(1.1); }
+  66% { transform: translate(-20px, 20px) scale(0.9); }
+  100% { transform: translate(0px, 0px) scale(1); }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.animate-blob {
+  animation: blob 7s infinite;
+}
+
+/* Ajoutez ces styles à la fin de votre fichier global.css */
+
+/* Animations */
+.animate-fade-in {
+  animation: fadeIn 0.8s ease-out forwards;
+  opacity: 0;
+}
+
+.animate-slide-in {
+  animation: slideIn 0.8s ease-out forwards;
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+/* Keyframes */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Back to Top button */
+#back-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  z-index: 1000;
+}
+
+#back-to-top.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Skill bars */
+.skill-bar {
+  height: 8px;
+  background: linear-gradient(90deg, #3B82F6, #8B5CF6);
+  border-radius: 4px;
+  width: 0;
+  transition: width 1.5s ease-in-out;
+}
+
+/* Gallery items */
+.gallery-item {
+  opacity: 0;
+  transform: scale(0.9);
+  transition: all 0.5s ease;
+}
+
+.gallery-item.animate-fade-in {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Loading state */
+body:not(.loaded) {
+  overflow: hidden;
+}
+
+body:not(.loaded)::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #0F172A;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+body.loaded::before {
+  display: none;
+}
+/* ANIMATIONS IMPACTANTES */
+
+/* 1. Effet de typing et brillance */
+.text-shimmer {
+  position: relative;
+  background: linear-gradient(90deg, #3B82F6, #8B5CF6, #EC4899);
+  background-size: 200% auto;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shimmer 3s linear infinite;
+}
+
+@keyframes shimmer {
+  0% { background-position: 0% center; }
+  100% { background-position: 200% center; }
+}
+
+/* 2. Effet de particules */
+.particle {
+  filter: blur(1px);
+  animation: floatParticle 20s infinite ease-in-out;
+}
+
+@keyframes floatParticle {
+  0%, 100% { transform: translate(0, 0); }
+  25% { transform: translate(10px, -10px); }
+  50% { transform: translate(-5px, 5px); }
+  75% { transform: translate(-10px, -5px); }
+}
+
+/* 3. Effet de vague sur les boutons */
+@keyframes wave {
+  0% { background-position: 0% center; }
+  100% { background-position: 400% center; }
+}
+
+.btn-wave {
+  transition: all 0.3s ease;
+}
+
+/* 4. Effet Neon */
+.neon-section {
+  position: relative;
+  transition: all 0.5s ease;
+}
+
+.neon-section::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(45deg, #3B82F6, #8B5CF6, #EC4899, #3B82F6);
+  border-radius: inherit;
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.neon-section.neon-active::before {
+  opacity: 1;
+  animation: neonBorder 3s linear infinite;
+}
+
+@keyframes neonBorder {
+  0%, 100% { filter: hue-rotate(0deg) blur(2px); }
+  50% { filter: hue-rotate(90deg) blur(3px); }
+}
+
+@keyframes neonPulse {
+  0%, 100% { box-shadow: 0 0 5px rgba(59, 130, 246, 0.5); }
+  50% { box-shadow: 0 0 20px rgba(59, 130, 246, 0.8), 0 0 30px rgba(139, 92, 246, 0.6); }
+}
+
+/* 5. Effet de révélation de texte */
+.text-reveal {
+  clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 1s cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+/* 6. Effet 3D sur les cartes */
+.card-3d {
+  transform-style: preserve-3d;
+  transition: transform 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.card-3d:hover {
+  transform: perspective(1000px) rotateX(5deg) rotateY(5deg) scale(1.02);
+}
+
+/* 7. Effet de morphing */
+.morph-container[data-shape="circle"] .morph-shape {
+  border-radius: 50%;
+}
+.morph-container[data-shape="triangle"] .morph-shape {
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+}
+.morph-container[data-shape="square"] .morph-shape {
+  border-radius: 0;
+}
+.morph-container[data-shape="pentagon"] .morph-shape {
+  clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
+}
+
+.morph-shape {
+  transition: all 2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+/* 8. Effet de parallaxe avancé */
+.parallax-layer {
+  position: absolute;
+  will-change: transform;
+}
+
+/* 9. Effet de scanline (style cyber) */
+.scanline {
+  position: relative;
+  overflow: hidden;
+}
+
+.scanline::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #3B82F6, transparent);
+  animation: scan 3s linear infinite;
+}
+
+@keyframes scan {
+  0% { top: 0%; }
+  100% { top: 100%; }
+}
+
+/* 10. Effet de vibration sur les titres */
+.vibrate {
+  animation: vibrate 0.3s linear infinite both;
+}
+
+@keyframes vibrate {
+  0% { transform: translate(0); }
+  20% { transform: translate(-2px, 2px); }
+  40% { transform: translate(-2px, -2px); }
+  60% { transform: translate(2px, 2px); }
+  80% { transform: translate(2px, -2px); }
+  100% { transform: translate(0); }
+}

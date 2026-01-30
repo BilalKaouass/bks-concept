@@ -1,0 +1,174 @@
+---
+const projects = [
+  {
+    title: "Boutique Luxe Mode",
+    category: "E-commerce",
+    description: "Site e-commerce haut de gamme avec réalité augmentée",
+    image: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=800&auto=format&fit=crop",
+    tags: ["Next.js", "Stripe", "3D", "React"],
+    features: ["Paiement sécurisé", "AR View", "Catalogue 3D"],
+    link: "#"
+  },
+  {
+    title: "Plateforme SaaS Startup",
+    category: "Application Web",
+    description: "Solution SaaS complète pour gestion d'entreprise",
+    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&auto=format&fit=crop",
+    tags: ["React", "Node.js", "MongoDB", "AWS"],
+    features: ["Dashboard avancé", "API REST", "Analytics"],
+    link: "#"
+  },
+  {
+    title: "Restaurant Gastronomique",
+    category: "Site Vitrine",
+    description: "Site élégant avec réservation en ligne et menu digital",
+    image: "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=800&auto=format&fit=crop",
+    tags: ["Astro", "Tailwind", "Booking", "SEO"],
+    features: ["Réservation", "Menu interactif", "Galerie"],
+    link: "#"
+  },
+  {
+  title: "App Fitness Connectée",
+  category: "Application Mobile",
+  description: "Application fitness avec suivi IA et communauté",
+  image: "https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=800&h=450&fit=crop&q=80",
+  tags: ["React Native", "Firebase", "IA", "Social"],
+  features: ["Tracking IA", "Communauté", "Plans personnalisés"],
+  link: "#"
+  },
+  {
+    title: "Agence Immobilière Pro",
+    category: "Site Vitrine",
+    description: "Site avec visite virtuelle et recherche avancée",
+    image: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&auto=format&fit=crop",
+    tags: ["Vue.js", "Map API", "3D Tour", "CRM"],
+    features: ["Visite 360°", "Recherche", "Chat intégré"],
+    link: "#"
+  },
+  {
+    title: "Académie en Ligne",
+    category: "Plateforme E-learning",
+    description: "Plateforme complète de formation avec certificats",
+    image: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=800&auto=format&fit=crop",
+    tags: ["Laravel", "Vue.js", "Payment", "Video"],
+    features: ["Cours vidéo", "Certificats", "Forum", "Quiz"],
+    link: "#"
+  }
+];
+---
+
+<section id="portfolio" class="py-20 bg-base-200 neon-section">
+  <div class="container mx-auto px-4">
+    <div class="text-center max-w-3xl mx-auto mb-16">
+      <h2 class="text-4xl md:text-5xl font-bold mb-6">
+        Nos <span class="text-gradient">Réalisations</span>
+      </h2>
+      <p class="text-xl opacity-80">
+        Découvrez des projets qui ont transformé des businesses
+      </p>
+    </div>
+
+    <!-- Filtres -->
+    <div class="flex flex-wrap justify-center gap-4 mb-12">
+      <button class="btn btn-sm md:btn-md rounded-full px-6 active:btn-primary">
+        Tous
+      </button>
+      <button class="btn btn-sm md:btn-md rounded-full px-6 btn-ghost">
+        E-commerce
+      </button>
+      <button class="btn btn-sm md:btn-md rounded-full px-6 btn-ghost">
+        Applications
+      </button>
+      <button class="btn btn-sm md:btn-md rounded-full px-6 btn-ghost">
+        Sites Vitrine
+      </button>
+      <button class="btn btn-sm md:btn-md rounded-full px-6 btn-ghost">
+        Mobile
+      </button>
+    </div>
+
+    <!-- Grille de projets -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+      {projects.map((project, index) => (
+        <div 
+          class="card bg-base-100 shadow-xl group hover:shadow-2xl transition-all duration-500 hover:-translate-y-2"
+        >
+          <figure class="h-48 overflow-hidden">
+            <img 
+              src={project.image} 
+              alt={project.title}
+              class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-base-100/80 to-transparent"></div>
+            <div class="absolute top-4 left-4">
+              <div class="badge badge-primary badge-lg">
+                {project.category}
+              </div>
+            </div>
+          </figure>
+          
+          <div class="card-body p-6">
+            <h3 class="card-title text-xl mb-2">{project.title}</h3>
+            <p class="opacity-80 mb-4">{project.description}</p>
+            
+            <div class="flex flex-wrap gap-2 mb-4">
+              {project.tags.map(tag => (
+                <div class="badge badge-outline badge-sm">
+                  {tag}
+                </div>
+              ))}
+            </div>
+            
+            <div class="space-y-2 mb-6">
+              {project.features.map(feature => (
+                <div class="flex items-center text-sm">
+                  <div class="w-1.5 h-1.5 bg-primary rounded-full mr-2"></div>
+                  <span class="opacity-90">{feature}</span>
+                </div>
+              ))}
+            </div>
+            
+            <div class="card-actions justify-end">
+              <a 
+                href={project.link} 
+                class="btn btn-ghost text-primary group-hover:btn-primary transition-all"
+              >
+                Voir le projet
+                <span class="ml-2 opacity-0 group-hover:opacity-100 transition-opacity">→</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+
+    <!-- Call to Action Portfolio -->
+    <div class="text-center">
+      <div class="stats shadow bg-base-100 max-w-md mx-auto mb-8">
+        <div class="stat">
+          <div class="stat-title">Projets livrés</div>
+          <div class="stat-value text-primary">50+</div>
+          <div class="stat-desc">Depuis 2023</div>
+        </div>
+      </div>
+      
+      <p class="text-lg mb-8 max-w-2xl mx-auto">
+        Votre projet pourrait être le prochain à figurer ici. 
+        Parlons-en !
+      </p>
+      
+      <a href="/contact" class="btn btn-outline btn-lg rounded-full px-10 text-lg">
+        🎯 Votre projet ici ?
+      </a>
+    </div>
+  </div>
+</section>
+
+<style>
+  .text-gradient {
+    background: linear-gradient(90deg, #3B82F6, #8B5CF6, #EC4899);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+</style>

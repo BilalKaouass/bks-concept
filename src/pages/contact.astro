@@ -1,0 +1,89 @@
+---
+import Layout from '../layouts/Layout.astro';
+import ContactComponent from '../components/Contact.astro';
+import CTA from '../components/CTA.astro';
+---
+
+<Layout>
+  <!-- Hero pour la page contact -->
+  <section class="hero min-h-[50vh] bg-gradient-to-br from-primary/10 to-secondary/10">
+    <div class="hero-content text-center">
+      <div class="max-w-4xl">
+        <h1 class="text-5xl md:text-6xl font-bold mb-6">
+          Contactez <span class="text-gradient">BKS Concept</span>
+        </h1>
+        <p class="text-xl md:text-2xl opacity-80 mb-10 max-w-3xl mx-auto">
+          Discutons de votre projet. Réponse sous 24h garantie.
+        </p>
+        <div class="stats shadow bg-base-100">
+          <div class="stat">
+            <div class="stat-title">Temps de réponse</div>
+            <div class="stat-value text-primary">24h</div>
+            <div class="stat-desc">Garanti</div>
+          </div>
+          <div class="stat">
+            <div class="stat-title">Support</div>
+            <div class="stat-value text-secondary">7j/7</div>
+            <div class="stat-desc">Disponible</div>
+          </div>
+          <div class="stat">
+            <div class="stat-title">Devis</div>
+            <div class="stat-value text-accent">Gratuit</div>
+            <div class="stat-desc">Sans engagement</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Composant contact principal -->
+  <ContactComponent />
+  
+  <!-- Section supplémentaire -->
+  <section class="py-20">
+    <div class="container mx-auto px-4">
+      <div class="card bg-base-200 shadow-xl">
+        <div class="card-body p-12 text-center">
+          <h2 class="text-3xl md:text-4xl font-bold mb-6">
+            Autres moyens de nous contacter
+          </h2>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="flex flex-col items-center p-6">
+              <div class="text-5xl mb-4">📧</div>
+              <h3 class="text-xl font-bold mb-2">Email</h3>
+              <a href="mailto:contact@bksconcept.fr" class="link link-primary">
+                bksconcept@gmail.com
+              </a>
+              <p class="text-sm opacity-80 mt-2">Réponse sous 24h</p>
+            </div>
+            <div class="flex flex-col items-center p-6">
+              <div class="text-5xl mb-4">📱</div>
+              <h3 class="text-xl font-bold mb-2">Téléphone</h3>
+              <a href="tel:+33123456789" class="link link-primary">
+                +32 4 84 24 36 46
+              </a>
+              <p class="text-sm opacity-80 mt-2">Lun-Ven, 9h-18h</p>
+            </div>
+            <div class="flex flex-col items-center p-6">
+              <div class="text-5xl mb-4">💼</div>
+              <h3 class="text-xl font-bold mb-2">Rendez-vous</h3>
+              <p class="opacity-80">Visio ou présentiel</p>
+              <p class="text-sm opacity-80 mt-2">Wallonie</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <CTA />
+</Layout>
+
+<style>
+  .text-gradient {
+    background: linear-gradient(90deg, #3B82F6, #8B5CF6, #EC4899);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+</style>

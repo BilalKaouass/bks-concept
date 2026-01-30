@@ -1,0 +1,103 @@
+<section class="relative py-20 overflow-hidden neon-section">
+  <!-- Background elements -->
+  <div class="absolute inset-0 -z-10">
+    <div class="absolute top-0 left-0 w-64 h-64 bg-primary/5 rounded-full blur-3xl"></div>
+    <div class="absolute bottom-0 right-0 w-64 h-64 bg-secondary/5 rounded-full blur-3xl"></div>
+  </div>
+
+  <div class="container mx-auto px-4 text-center">
+    <div class="max-w-3xl mx-auto">
+      <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 mb-6">
+        <span class="w-2 h-2 bg-primary rounded-full animate-pulse"></span>
+        <span class="text-sm font-medium">Ne perdez plus de clients</span>
+      </div>
+
+      <h2 class="text-4xl md:text-6xl font-bold mb-8">
+        <span class="block">Prêt à Marquer</span>
+        <span class="block text-gradient">Vos Clients ?</span>
+      </h2>
+
+      <p class="text-xl md:text-2xl opacity-80 mb-12 max-w-2xl mx-auto">
+        Chaque jour d'attente, c'est des clients potentiels que vous perdez.
+        Transformez votre vision en réalité dès aujourd'hui.
+      </p>
+
+      <div class="flex flex-col sm:flex-row gap-6 justify-center items-center">
+        <a 
+          href="/contact" 
+          class="btn btn-gradient btn-lg rounded-full px-12 text-lg shadow-2xl transform hover:-translate-y-2 transition-all duration-300 group"
+        >
+          <span class="text-xl font-bold group-hover:scale-110 transition-transform">
+            🚀 Démarrer maintenant
+          </span>
+        </a>
+
+        <div class="flex items-center gap-3">
+          <div class="avatar-group -space-x-4">
+            <div class="avatar">
+              <div class="w-12 bg-primary text-primary-content">
+                <span>👤</span>
+              </div>
+            </div>
+            <div class="avatar">
+              <div class="w-12 bg-secondary text-secondary-content">
+                <span>👤</span>
+              </div>
+            </div>
+            <div class="avatar">
+              <div class="w-12 bg-accent text-accent-content">
+                <span>👤</span>
+              </div>
+            </div>
+          </div>
+          <div class="text-left">
+            <p class="font-bold">50+ clients satisfaits</p>
+            <p class="text-sm opacity-80">Rejoignez-les dès aujourd'hui</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Garanties -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16">
+        <div class="flex flex-col items-center p-6 rounded-2xl bg-base-200/50 backdrop-blur-sm">
+          <div class="text-4xl mb-4">✅</div>
+          <h3 class="text-xl font-bold mb-2">Devis Gratuit</h3>
+          <p class="opacity-80">Sans engagement, personnalisé</p>
+        </div>
+
+        <div class="flex flex-col items-center p-6 rounded-2xl bg-base-200/50 backdrop-blur-sm">
+          <div class="text-4xl mb-4">🛡️</div>
+          <h3 class="text-xl font-bold mb-2">Garantie Satisfait</h3>
+          <p class="opacity-80">30 jours d'essai</p>
+        </div>
+
+        <div class="flex flex-col items-center p-6 rounded-2xl bg-base-200/50 backdrop-blur-sm">
+          <div class="text-4xl mb-4">⚡</div>
+          <h3 class="text-xl font-bold mb-2">Livraison Rapide</h3>
+          <p class="opacity-80">Délais respectés</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .text-gradient {
+    background: linear-gradient(90deg, #3B82F6, #8B5CF6, #EC4899);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .btn-gradient {
+    background: linear-gradient(90deg, #3B82F6, #8B5CF6);
+    color: white;
+    border: none;
+  }
+
+  .btn-gradient:hover {
+    background: linear-gradient(90deg, #2563EB, #7C3AED);
+    transform: translateY(-2px);
+    box-shadow: 0 20px 40px rgba(59, 130, 246, 0.3);
+  }
+</style>

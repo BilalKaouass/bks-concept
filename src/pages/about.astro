@@ -1,0 +1,166 @@
+---
+import Layout from '../layouts/Layout.astro';
+import CTA from '../components/CTA.astro';
+---
+
+<Layout>
+  <!-- Hero About -->
+  <section class="hero min-h-[60vh] bg-gradient-to-br from-base-100 to-base-200">
+    <div class="hero-content text-center">
+      <div class="max-w-4xl">
+        <h1 class="text-5xl md:text-6xl font-bold mb-6">
+          À propos de <span class="text-gradient">BKS Concept</span>
+        </h1>
+        <p class="text-xl md:text-2xl opacity-80 mb-10 max-w-3xl mx-auto">
+          Nous créons des expériences digitales qui transforment les visiteurs en clients fidèles
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Notre histoire -->
+  <section class="py-20">
+    <div class="container mx-auto px-4">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div>
+          <h2 class="text-4xl font-bold mb-6">Notre Histoire</h2>
+          <p class="text-lg opacity-80 mb-6">
+            Fondée en 2023, BKS Concept est née d'une passion pour le design web et l'innovation digitale. 
+            Notre mission : créer des sites web qui font dire "WAOW" à vos clients.
+          </p>
+          <p class="text-lg opacity-80 mb-6">
+            Nous croyons qu'un site web n'est pas juste une vitrine en ligne, mais une expérience 
+            immersive qui doit captiver, engager et convertir.
+          </p>
+          <div class="stats shadow bg-base-200">
+            <div class="stat">
+              <div class="stat-title">Années d'expérience</div>
+              <div class="stat-value text-primary">3+</div>
+            </div>
+            <div class="stat">
+              <div class="stat-title">Projets livrés</div>
+              <div class="stat-value text-secondary">50+</div>
+            </div>
+            <div class="stat">
+              <div class="stat-title">Clients satisfaits</div>
+              <div class="stat-value text-accent">98%</div>
+            </div>
+          </div>
+        </div>
+        <div class="card bg-base-200 shadow-xl">
+          <div class="card-body p-8">
+            <h3 class="card-title text-2xl mb-6">Notre Philosophie</h3>
+            <div class="space-y-4">
+              <div class="flex items-start gap-4">
+                <div class="text-2xl">🎯</div>
+                <div>
+                  <h4 class="font-bold">Design centré utilisateur</h4>
+                  <p class="opacity-80">Nous plaçons l'expérience utilisateur au cœur de chaque création</p>
+                </div>
+              </div>
+              <div class="flex items-start gap-4">
+                <div class="text-2xl">⚡</div>
+                <div>
+                  <h4 class="font-bold">Performance optimale</h4>
+                  <p class="opacity-80">Des sites rapides, sécurisés et optimisés pour le SEO</p>
+                </div>
+              </div>
+              <div class="flex items-start gap-4">
+                <div class="text-2xl">🤝</div>
+                <div>
+                  <h4 class="font-bold">Collaboration transparente</h4>
+                  <p class="opacity-80">Vous êtes impliqué à chaque étape du processus</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+    <!-- Équipe - Bilal.K -->
+  <section class="py-20 bg-base-200">
+    <div class="container mx-auto px-4">
+      <h2 class="text-4xl font-bold text-center mb-12">Notre Fondateur</h2>
+      <div class="flex justify-center">
+        <div class="card bg-base-100 shadow-xl max-w-md">
+          <div class="card-body items-center text-center p-8">
+            <!-- Avatar/Photo -->
+            <div class="avatar placeholder mb-6">
+              <div class="bg-gradient-to-br from-primary to-secondary text-primary-content rounded-full w-32 h-32 text-4xl">
+                <span>BK</span>
+              </div>
+            </div>
+            
+            <!-- Nom et titre -->
+            <h3 class="card-title text-2xl mb-2">Bilal.K</h3>
+            <div class="flex flex-col gap-2 mb-6">
+              <div class="badge badge-primary badge-lg">CEO & Fondateur</div>
+              <div class="badge badge-secondary badge-lg">Lead Développeur</div>
+            </div>
+            
+            <!-- Description -->
+            <p class="opacity-80 mb-6">
+              Passionné par le développement web et l'innovation digitale, je combine expertise technique et vision stratégique pour créer des solutions web sur mesure qui transforment les businesses.
+            </p>
+            
+            <!-- Compétences -->
+            <div class="w-full mb-6">
+              <h4 class="font-bold mb-4 text-center">Expertises principales</h4>
+              <div class="flex flex-wrap justify-center gap-2">
+                <div class="badge badge-outline">Astro</div>
+                <div class="badge badge-outline">React</div>
+                <div class="badge badge-outline">Tailwind CSS</div>
+                <div class="badge badge-outline">JavaScript</div>
+                <div class="badge badge-outline">UI/UX Design</div>
+                <div class="badge badge-outline">Stratégie Digitale</div>
+              </div>
+            </div>
+            
+            <!-- Contact -->
+            <div class="card-actions justify-center">
+              <a href="/contact" class="btn btn-primary">
+                <span>Me contacter</span>
+                <span class="ml-2">💬</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Philosophie personnelle -->
+      <div class="mt-16 text-center max-w-2xl mx-auto">
+        <h3 class="text-2xl font-bold mb-6">Ma Philosophie</h3>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div class="flex flex-col items-center p-4">
+            <div class="text-4xl mb-4">🎯</div>
+            <h4 class="font-bold mb-2">Vision Claire</h4>
+            <p class="text-sm opacity-80">Chaque projet commence par une compréhension approfondie de vos objectifs business</p>
+          </div>
+          <div class="flex flex-col items-center p-4">
+            <div class="text-4xl mb-4">⚡</div>
+            <h4 class="font-bold mb-2">Exécution Rapide</h4>
+            <p class="text-sm opacity-80">Développement agile avec des livrables réguliers et transparents</p>
+          </div>
+          <div class="flex flex-col items-center p-4">
+            <div class="text-4xl mb-4">🤝</div>
+            <h4 class="font-bold mb-2">Partnership</h4>
+            <p class="text-sm opacity-80">Je suis votre partenaire tech, pas juste un prestataire</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <CTA />
+</Layout>
+
+<style>
+  .text-gradient {
+    background: linear-gradient(90deg, #3B82F6, #8B5CF6, #EC4899);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+</style>

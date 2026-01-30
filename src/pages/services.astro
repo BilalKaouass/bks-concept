@@ -1,0 +1,98 @@
+---
+import Layout from '../layouts/Layout.astro';
+import ServicesComponent from '../components/Services.astro';
+import CTA from '../components/CTA.astro';
+---
+
+<Layout>
+  <!-- Hero Services -->
+  <section class="hero min-h-[50vh] bg-gradient-to-br from-primary/10 to-secondary/10">
+    <div class="hero-content text-center">
+      <div class="max-w-4xl">
+        <h1 class="text-5xl md:text-6xl font-bold mb-6">
+          Nos <span class="text-gradient">Services</span>
+        </h1>
+        <p class="text-xl md:text-2xl opacity-80 mb-10 max-w-3xl mx-auto">
+          Des solutions digitales complètes pour transformer votre vision en réalité
+        </p>
+        <div class="alert bg-base-100 shadow-lg">
+          <span>🎯 <strong>Objectif :</strong> Créer l'expérience digitale parfaite pour votre business</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Composant services -->
+  <ServicesComponent />
+  
+  <!-- Pricing -->
+  <section class="py-20 bg-base-200">
+    <div class="container mx-auto px-4">
+      <h2 class="text-4xl font-bold text-center mb-12">Tarifs Transparents</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="card bg-base-100 shadow-xl">
+          <div class="card-body p-8">
+            <h3 class="card-title text-2xl mb-4">Site Vitrine</h3>
+            <div class="text-4xl font-bold text-primary mb-4">À partir de 1 500€</div>
+            <ul class="space-y-3 mb-6">
+              <li class="flex items-center">✓ Design personnalisé</li>
+              <li class="flex items-center">✓ Responsive mobile</li>
+              <li class="flex items-center">✓ SEO de base</li>
+              <li class="flex items-center">✓ 5 pages</li>
+              <li class="flex items-center">✓ Hébergement 1 an</li>
+            </ul>
+            <div class="card-actions">
+              <a href="/contact" class="btn btn-primary w-full">Choisir ce plan</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="card bg-base-100 shadow-xl border-2 border-primary">
+          <div class="card-body p-8">
+            <div class="badge badge-primary badge-lg mb-4">POPULAIRE</div>
+            <h3 class="card-title text-2xl mb-4">E-commerce</h3>
+            <div class="text-4xl font-bold text-primary mb-4">À partir de 3 500€</div>
+            <ul class="space-y-3 mb-6">
+              <li class="flex items-center">✓ Catalogue produits</li>
+              <li class="flex items-center">✓ Paiement sécurisé</li>
+              <li class="flex items-center">✓ Gestion des stocks</li>
+              <li class="flex items-center">✓ Panier utilisateur</li>
+              <li class="flex items-center">✓ Support 7j/7</li>
+            </ul>
+            <div class="card-actions">
+              <a href="/contact" class="btn btn-primary w-full">Choisir ce plan</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="card bg-base-100 shadow-xl">
+          <div class="card-body p-8">
+            <h3 class="card-title text-2xl mb-4">Application Web</h3>
+            <div class="text-4xl font-bold text-primary mb-4">Sur devis</div>
+            <ul class="space-y-3 mb-6">
+              <li class="flex items-center">✓ Développement sur mesure</li>
+              <li class="flex items-center">✓ Base de données</li>
+              <li class="flex items-center">✓ API personnalisée</li>
+              <li class="flex items-center">✓ Interface admin</li>
+              <li class="flex items-center">✓ Maintenance incluse</li>
+            </ul>
+            <div class="card-actions">
+              <a href="/contact" class="btn btn-outline w-full">Demander un devis</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <CTA />
+</Layout>
+
+<style>
+  .text-gradient {
+    background: linear-gradient(90deg, #3B82F6, #8B5CF6, #EC4899);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+</style>

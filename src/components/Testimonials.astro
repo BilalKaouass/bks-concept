@@ -1,0 +1,172 @@
+---
+const testimonials = [
+  {
+    name: "Marie Laurent",
+    role: "CEO - Fashion Luxe",
+    content: "Notre site e-commerce créé par BKS Concept a multiplié nos ventes par 3. L'expérience utilisateur est exceptionnelle !",
+    rating: 5,
+    image: "👩‍💼"
+  },
+  {
+    name: "Thomas Dubois",
+    role: "Directeur - Tech Startup",
+    content: "L'application web qu'ils ont développée pour nous a révolutionné notre productivité. Service client au top !",
+    rating: 5,
+    image: "👨‍💻"
+  },
+  {
+    name: "Sophie Martin",
+    role: "Restauratrice - Le Gourmet",
+    content: "Notre site vitrine attire maintenant 70% de clients en plus. Le design fait vraiment 'WAOW' comme promis !",
+    rating: 5,
+    image: "👩‍🍳"
+  },
+  {
+    name: "Alexandre Chen",
+    role: "Founder - EduTech Pro",
+    content: "Plateforme e-learning performante et intuitive. Les retours de nos étudiants sont excellents.",
+    rating: 5,
+    image: "👨‍🏫"
+  },
+  {
+    name: "Camille Petit",
+    role: "Manager - Immo Elite",
+    content: "Le site avec visite virtuelle a totalement transformé notre business. Conversion +200% !",
+    rating: 5,
+    image: "👩‍💼"
+  },
+  {
+    name: "Lucas Moreau",
+    role: "CEO - FitLife App",
+    content: "Application mobile innovante livrée dans les délais. L'équipe est réactive et professionnelle.",
+    rating: 5,
+    image: "👨‍🔬"
+  }
+];
+---
+
+<section class="py-20 bg-gradient-to-b from-base-100 to-base-200 neon-section">
+  <div class="container mx-auto px-4">
+    <div class="text-center max-w-3xl mx-auto mb-16">
+      <h2 class="text-4xl md:text-5xl font-bold mb-6">
+        Ils Nous Font <span class="text-gradient">Confiance</span>
+      </h2>
+      <p class="text-xl opacity-80">
+        Découvrez ce que nos clients disent de leur expérience
+      </p>
+    </div>
+
+    <!-- Statistiques -->
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16">
+      <div class="card bg-base-200 shadow-lg">
+        <div class="card-body items-center text-center">
+          <div class="text-4xl font-bold text-primary">4.9/5</div>
+          <div class="rating rating-sm">
+            <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" checked />
+            <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" checked />
+            <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" checked />
+            <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" checked />
+            <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" checked />
+          </div>
+          <p class="text-sm opacity-80">Satisfaction client</p>
+        </div>
+      </div>
+
+      <div class="card bg-base-200 shadow-lg">
+        <div class="card-body items-center text-center">
+          <div class="text-4xl font-bold text-secondary">98%</div>
+          <p class="text-sm opacity-80">Clients satisfaits</p>
+        </div>
+      </div>
+
+      <div class="card bg-base-200 shadow-lg">
+        <div class="card-body items-center text-center">
+          <div class="text-4xl font-bold text-accent">50+</div>
+          <p class="text-sm opacity-80">Projets livrés</p>
+        </div>
+      </div>
+
+      <div class="card bg-base-200 shadow-lg">
+        <div class="card-body items-center text-center">
+          <div class="text-4xl font-bold text-primary">24/7</div>
+          <p class="text-sm opacity-80">Support client</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Témoignages -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+      {testimonials.map((testimonial, index) => (
+        <div 
+          class="card bg-base-100 shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 group"
+        >
+          <div class="card-body p-8">
+            <!-- Étoiles -->
+            <div class="flex gap-1 mb-4">
+              {Array.from({ length: testimonial.rating }).map((_, i) => (
+                <span class="text-yellow-400 text-xl">★</span>
+              ))}
+            </div>
+
+            <!-- Citation -->
+            <p class="text-lg italic mb-8 opacity-90">
+              "{testimonial.content}"
+            </p>
+
+            <!-- Auteur -->
+            <div class="flex items-center gap-4">
+              <div class="avatar placeholder">
+                <div class="bg-primary/20 text-primary-content rounded-full w-14 h-14 text-2xl">
+                  <span>{testimonial.image}</span>
+                </div>
+              </div>
+              <div>
+                <h4 class="font-bold text-lg">{testimonial.name}</h4>
+                <p class="text-sm opacity-80">{testimonial.role}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+
+    <!-- Carousel Navigation (visuel seulement) -->
+    <div class="flex justify-center gap-3 mb-12">
+      <button class="btn btn-circle btn-sm btn-primary">←</button>
+      <div class="flex items-center gap-2">
+        {[1, 2, 3].map((_, i) => (
+          <button class={`btn btn-circle btn-xs ${i === 0 ? 'btn-primary' : 'btn-ghost'}`}>
+            {i + 1}
+          </button>
+        ))}
+      </div>
+      <button class="btn btn-circle btn-sm btn-primary">→</button>
+    </div>
+
+    <!-- CTA Témoignages -->
+    <div class="text-center">
+      <div class="card bg-gradient-to-r from-primary/10 to-secondary/10 border border-primary/20 max-w-2xl mx-auto">
+        <div class="card-body">
+          <h3 class="card-title text-2xl mb-4">Devenez notre prochain succès</h3>
+          <p class="mb-6">
+            Rejoignez nos clients satisfaits et transformez votre présence digitale
+          </p>
+          <div class="card-actions justify-center">
+            <a href="/contact" class="btn btn-primary rounded-full px-10">
+              Témoigner bientôt ici
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .text-gradient {
+    background: linear-gradient(90deg, #3B82F6, #8B5CF6, #EC4899);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+</style>
