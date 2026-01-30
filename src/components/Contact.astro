@@ -14,21 +14,29 @@ import { motion } from 'framer-motion';
     </div>
 
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
-      <!-- Formulaire avec Netlify Forms -->
+      <!-- Formulaire avec Netlify Forms - CORRIGÉ -->
       <div class="card bg-base-200 shadow-xl">
         <div class="card-body p-8">
+          <!-- IMPORTANT : Utilisez "netlify" au lieu de "data-netlify" -->
           <form 
             name="contact"
             method="POST"
-            data-netlify="true"
+            netlify
+            action="/success"
             data-netlify-honeypot="bot-field"
             class="space-y-6"
           >
-            <!-- Champs cachés Netlify -->
+            <!-- Champs cachés Netlify - CRITIQUE -->
             <input type="hidden" name="form-name" value="contact" />
-            <div class="hidden">
-              <label>Ne remplissez pas ce champ: <input name="bot-field" /></label>
-            </div>
+            <input type="hidden" name="bot-field" />
+            
+            <!-- Honeypot pour les spams -->
+            <p class="hidden">
+              <label>
+                Ne remplissez pas ce champ si vous êtes humain:
+                <input name="bot-field" />
+              </label>
+            </p>
 
             <div class="form-control">
               <label class="label">
@@ -73,7 +81,7 @@ import { motion } from 'framer-motion';
                 <span class="label-text text-lg">Type de projet *</span>
               </label>
               <select name="type_projet" class="select select-bordered select-lg bg-base-100" required>
-                <option disabled selected>Choisissez une option</option>
+                <option disabled selected value="">Choisissez une option</option>
                 <option value="Site vitrine">Site web vitrine</option>
                 <option value="E-commerce">Site e-commerce</option>
                 <option value="Application web">Application web</option>
@@ -87,7 +95,7 @@ import { motion } from 'framer-motion';
                 <span class="label-text text-lg">Budget estimé *</span>
               </label>
               <select name="budget" class="select select-bordered select-lg bg-base-100" required>
-                <option disabled selected>Choisissez une fourchette</option>
+                <option disabled selected value="">Choisissez une fourchette</option>
                 <option value="1000-3000">1 000€ - 3 000€</option>
                 <option value="3000-6000">3 000€ - 6 000€</option>
                 <option value="6000-10000">6 000€ - 10 000€</option>
