@@ -5,15 +5,27 @@ import '../styles/global.css';
 ---
 
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr" data-theme="bksconcept">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>BKS Concept - Création de Sites Web Professionnels</title>
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    
+    <!-- Favicon .ico (compatible tous navigateurs) -->
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    
+    <!-- Favicon SVG pour les navigateurs modernes (optionnel) -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    
+    <!-- Pour iOS/Safari -->
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    
     <meta name="description" content="BKS Concept crée des sites web professionnels et impactants qui font dire 'WAOW' à vos clients. Design percutant, développement sur mesure." />
+    
+    <!-- Couleur de thème pour les navigateurs mobiles -->
+    <meta name="theme-color" content="#0F172A">
   </head>
-  <body class="min-h-screen flex flex-col bg-gradient-to-br from-base-100 to-base-200">
+  <body class="min-h-screen bg-base-100">
     <Header />
     <main class="flex-grow">
       <slot />
