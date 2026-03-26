@@ -1,164 +1,135 @@
 ---
 const projects = [
   {
-    title: "Boutique Luxe Mode",
-    category: "E-commerce",
-    description: "Site e-commerce haut de gamme avec réalité augmentée",
-    image: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=800&auto=format&fit=crop",
-    tags: ["Next.js", "Stripe", "3D", "React"],
-    features: ["Paiement sécurisé", "AR View", "Catalogue 3D"],
-    link: "#"
+    title: "Autosoftronics",
+    category: "Site vitrine",
+    description:
+      "Conception d’un site professionnel pour un spécialiste en électronique automobile, avec une présentation claire des services, une structure rassurante et une prise de contact simplifiée.",
+    image: "/images/projects/autosoftronics.jpg",
+    tags: ["Astro", "Tailwind", "SEO", "UX"],
+    features: [
+      "Présentation claire des services",
+      "Parcours orienté devis",
+      "Structure premium et rassurante"
+    ],
+    link: "https://autosoftronics.com"
   },
   {
-    title: "Plateforme SaaS Startup",
-    category: "Application Web",
-    description: "Solution SaaS complète pour gestion d'entreprise",
-    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&auto=format&fit=crop",
-    tags: ["React", "Node.js", "MongoDB", "AWS"],
-    features: ["Dashboard avancé", "API REST", "Analytics"],
-    link: "#"
-  },
-  {
-    title: "Restaurant Gastronomique",
-    category: "Site Vitrine",
-    description: "Site élégant avec réservation en ligne et menu digital",
-    image: "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=800&auto=format&fit=crop",
-    tags: ["Astro", "Tailwind", "Booking", "SEO"],
-    features: ["Réservation", "Menu interactif", "Galerie"],
-    link: "#"
-  },
-  {
-  title: "App Fitness Connectée",
-  category: "Application Mobile",
-  description: "Application fitness avec suivi IA et communauté",
-  image: "https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=800&h=450&fit=crop&q=80",
-  tags: ["React Native", "Firebase", "IA", "Social"],
-  features: ["Tracking IA", "Communauté", "Plans personnalisés"],
-  link: "#"
-  },
-  {
-    title: "Agence Immobilière Pro",
-    category: "Site Vitrine",
-    description: "Site avec visite virtuelle et recherche avancée",
-    image: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&auto=format&fit=crop",
-    tags: ["Vue.js", "Map API", "3D Tour", "CRM"],
-    features: ["Visite 360°", "Recherche", "Chat intégré"],
-    link: "#"
-  },
-  {
-    title: "Académie en Ligne",
-    category: "Plateforme E-learning",
-    description: "Plateforme complète de formation avec certificats",
-    image: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=800&auto=format&fit=crop",
-    tags: ["Laravel", "Vue.js", "Payment", "Video"],
-    features: ["Cours vidéo", "Certificats", "Forum", "Quiz"],
-    link: "#"
+    title: "Greenfarmerz",
+    category: "Site vitrine",
+    description:
+      "Réalisation d’un site orienté conversion pour une entreprise active dans les solutions énergétiques, avec mise en avant des prestations, des formulaires de contact et d’un discours plus crédible.",
+    image: "/images/projects/greenfarmerz.jpg",
+    tags: ["Web Design", "UX", "Responsive", "Conversion"],
+    features: [
+      "Mise en avant des solutions proposées",
+      "Interface claire et responsive",
+      "Navigation pensée pour la demande de devis"
+    ],
+    link: "https://www.greenfarmerz.eu"
   }
 ];
 ---
 
-<section id="portfolio" class="py-20 bg-base-200 neon-section">
+<section id="portfolio" class="py-24 bg-base-100">
   <div class="container mx-auto px-4">
     <div class="text-center max-w-3xl mx-auto mb-16">
-      <h2 class="text-4xl md:text-5xl font-bold mb-6">
+      <h2 class="text-4xl md:text-5xl font-bold mb-6 leading-tight">
         Nos <span class="text-gradient">Réalisations</span>
       </h2>
-      <p class="text-xl opacity-80">
-        Découvrez des projets qui ont transformé des businesses
+
+      <p class="text-lg md:text-xl text-base-content/70 leading-relaxed">
+        Des projets réels, conçus pour valoriser l’image de nos clients,
+        clarifier leur offre et faciliter la prise de contact.
       </p>
     </div>
 
-    <!-- Filtres -->
-    <div class="flex flex-wrap justify-center gap-4 mb-12">
-      <button class="btn btn-sm md:btn-md rounded-full px-6 active:btn-primary">
-        Tous
-      </button>
-      <button class="btn btn-sm md:btn-md rounded-full px-6 btn-ghost">
-        E-commerce
-      </button>
-      <button class="btn btn-sm md:btn-md rounded-full px-6 btn-ghost">
-        Applications
-      </button>
-      <button class="btn btn-sm md:btn-md rounded-full px-6 btn-ghost">
-        Sites Vitrine
-      </button>
-      <button class="btn btn-sm md:btn-md rounded-full px-6 btn-ghost">
-        Mobile
-      </button>
-    </div>
-
-    <!-- Grille de projets -->
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-      {projects.map((project, index) => (
-        <div 
-          class="card bg-base-100 shadow-xl group hover:shadow-2xl transition-all duration-500 hover:-translate-y-2"
-        >
-          <figure class="h-48 overflow-hidden">
-            <img 
-              src={project.image} 
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-14">
+      {projects.map((project) => (
+        <article class="group rounded-[28px] overflow-hidden border border-base-300/60 bg-base-200 shadow-[0_10px_40px_rgba(0,0,0,0.12)] hover:shadow-[0_20px_60px_rgba(0,0,0,0.18)] transition-all duration-500 hover:-translate-y-1 flex flex-col h-full">
+          <div class="relative h-64 md:h-80 overflow-hidden">
+            <img
+              src={project.image}
               alt={project.title}
-              class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+              class="w-full h-full object-cover group-hover:scale-[1.04] transition-transform duration-700"
             />
-            <div class="absolute inset-0 bg-gradient-to-t from-base-100/80 to-transparent"></div>
-            <div class="absolute top-4 left-4">
-              <div class="badge badge-primary badge-lg">
+            <div class="absolute inset-0 bg-gradient-to-t from-[#020817]/70 via-transparent to-transparent"></div>
+
+            <div class="absolute top-5 left-5">
+              <span class="inline-flex items-center rounded-full border border-white/15 bg-white/10 backdrop-blur-md px-4 py-2 text-xs md:text-sm font-medium text-white">
                 {project.category}
-              </div>
+              </span>
             </div>
-          </figure>
-          
-          <div class="card-body p-6">
-            <h3 class="card-title text-xl mb-2">{project.title}</h3>
-            <p class="opacity-80 mb-4">{project.description}</p>
-            
-            <div class="flex flex-wrap gap-2 mb-4">
-              {project.tags.map(tag => (
-                <div class="badge badge-outline badge-sm">
+
+            <div class="absolute bottom-5 left-5 right-5">
+              <h3 class="text-2xl md:text-3xl font-bold text-white drop-shadow-md">
+                {project.title}
+              </h3>
+            </div>
+          </div>
+
+          <div class="p-7 md:p-8 flex flex-col flex-1">
+            <p class="text-base md:text-lg text-base-content/72 leading-relaxed mb-6">
+              {project.description}
+            </p>
+
+            <div class="flex flex-wrap gap-2 mb-6">
+              {project.tags.map((tag) => (
+                <span class="badge badge-outline border-base-300/80 px-3 py-3 text-xs md:text-sm">
                   {tag}
+                </span>
+              ))}
+            </div>
+
+            <div class="space-y-3 mb-8">
+              {project.features.map((feature) => (
+                <div class="flex items-start gap-3 text-sm md:text-base text-base-content/78">
+                  <span class="mt-2 w-2 h-2 rounded-full bg-primary shrink-0"></span>
+                  <span>{feature}</span>
                 </div>
               ))}
             </div>
-            
-            <div class="space-y-2 mb-6">
-              {project.features.map(feature => (
-                <div class="flex items-center text-sm">
-                  <div class="w-1.5 h-1.5 bg-primary rounded-full mr-2"></div>
-                  <span class="opacity-90">{feature}</span>
+
+            <div class="mt-auto flex items-end justify-between gap-4 pt-6 border-t border-base-300/60">
+              <div class="flex flex-col justify-center">
+                <div class="text-xs uppercase tracking-[0.18em] text-base-content/45">
+                  Projet en ligne
                 </div>
-              ))}
-            </div>
-            
-            <div class="card-actions justify-end">
-              <a 
-                href={project.link} 
-                class="btn btn-ghost text-primary group-hover:btn-primary transition-all"
+                <div class="text-sm md:text-base font-medium text-base-content mt-1">
+                  {project.title}
+                </div>
+              </div>
+
+              <a
+                href={project.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn btn-primary rounded-2xl px-6 min-h-[56px] group/btn inline-flex items-center"
               >
-                Voir le projet
-                <span class="ml-2 opacity-0 group-hover:opacity-100 transition-opacity">→</span>
+                Voir le site
+                <span class="ml-2 transition-transform duration-300 group-hover/btn:translate-x-1">→</span>
               </a>
             </div>
           </div>
-        </div>
+        </article>
       ))}
     </div>
 
-    <!-- Call to Action Portfolio -->
-    <div class="text-center">
-      <div class="stats shadow bg-base-100 max-w-md mx-auto mb-8">
-        <div class="stat">
-          <div class="stat-title">Projets livrés</div>
-          <div class="stat-value text-primary">50+</div>
-          <div class="stat-desc">Depuis 2023</div>
-        </div>
-      </div>
-      
-      <p class="text-lg mb-8 max-w-2xl mx-auto">
-        Votre projet pourrait être le prochain à figurer ici. 
-        Parlons-en !
+    <div class="rounded-[28px] border border-base-300/60 bg-base-200 px-8 py-10 md:px-12 md:py-12 text-center shadow-[0_10px_40px_rgba(0,0,0,0.08)]">
+      <h3 class="text-2xl md:text-3xl font-bold mb-4">
+        Votre projet pourrait être le prochain.
+      </h3>
+
+      <p class="text-base md:text-lg text-base-content/70 max-w-2xl mx-auto mb-8 leading-relaxed">
+        Vous souhaitez moderniser votre image, créer un site plus premium
+        ou améliorer votre présence en ligne ? Parlons de votre besoin.
       </p>
-      
-      <a href="/contact" class="btn btn-outline btn-lg rounded-full px-10 text-lg">
-        🎯 Votre projet ici ?
+
+      <a
+        href="/contact"
+        class="btn btn-outline btn-lg rounded-2xl px-8 text-base md:text-lg"
+      >
+        Discuter de votre projet
       </a>
     </div>
   </div>
@@ -166,7 +137,7 @@ const projects = [
 
 <style>
   .text-gradient {
-    background: linear-gradient(90deg, #3B82F6, #8B5CF6, #EC4899);
+    background: linear-gradient(90deg, #60A5FA, #8B5CF6, #EC4899);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;

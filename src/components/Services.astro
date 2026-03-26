@@ -2,52 +2,56 @@
 const services = [
   {
     title: "Sites Web Vitrine",
-    description: "Présentez votre entreprise en ligne avec un design unique qui reflète votre identité.",
+    description: "Présentez votre entreprise en ligne avec un site moderne, clair et professionnel qui reflète votre identité.",
     icon: "🎨",
     features: ["Design sur mesure", "Responsive design", "SEO optimisé", "Hébergement inclus"]
   },
   {
     title: "Sites E-commerce",
-    description: "Vendez vos produits en ligne avec une boutique intuitive et sécurisée.",
+    description: "Vendez vos produits en ligne grâce à une boutique fluide, rassurante et pensée pour convertir.",
     icon: "🛒",
     features: ["Paiement sécurisé", "Gestion des stocks", "Analytics intégrés", "Mobile-first"]
   },
   {
     title: "Applications Web",
-    description: "Développement d'applications sur mesure pour vos besoins spécifiques.",
+    description: "Développement d’applications sur mesure pour répondre à des besoins spécifiques et améliorer vos process.",
     icon: "⚡",
     features: ["Développement sur mesure", "API intégration", "Base de données", "Maintenance"]
   },
   {
     title: "Refonte de Site",
-    description: "Modernisez votre site existant pour améliorer l'expérience utilisateur.",
+    description: "Modernisez votre site existant pour améliorer son image, son expérience utilisateur et ses performances.",
     icon: "🔄",
     features: ["Audit technique", "Modernisation UI/UX", "Optimisation SEO", "Migration"]
   }
 ];
 ---
 
-<section class="py-20 bg-base-200 neon-section">
+<section id="services" class="py-20 bg-base-200 neon-section">
   <div class="container mx-auto px-4">
     <div class="text-center max-w-3xl mx-auto mb-16">
-      <h2 class="text-4xl md:text-5xl font-bold mb-6">Nos Services <span class="text-primary">Créatifs</span></h2>
-      <p class="text-xl opacity-80">
-        Nous transformons vos idées en expériences digitales mémorables
-      </p>
+      <h2 class="text-4xl md:text-5xl font-bold mb-6">
+        Nos Services <span class="text-primary">Créatifs</span>
+      </h2>
+      
     </div>
     
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-      {services.map((service, index) => (
-        <div class="card bg-base-100 shadow-xl card-3d group hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
-          <div class="card-body p-8">
+      {services.map((service) => (
+        <div class="card bg-base-100 shadow-xl card-3d group hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 h-full">
+          <div class="card-body p-8 flex flex-col h-full">
             <div class="text-5xl mb-4 transform group-hover:scale-110 transition-transform duration-300">
               {service.icon}
             </div>
+
             <h3 class="card-title text-2xl mb-4">{service.title}</h3>
-            <p class="opacity-80 mb-6 text-reveal">{service.description}</p>
+
+            <p class="opacity-80 mb-6">
+              {service.description}
+            </p>
             
             <ul class="space-y-2 mb-6">
-              {service.features.map(feature => (
+              {service.features.map((feature) => (
                 <li class="flex items-center">
                   <div class="w-2 h-2 bg-primary rounded-full mr-3"></div>
                   <span>{feature}</span>
@@ -55,7 +59,7 @@ const services = [
               ))}
             </ul>
             
-            <div class="card-actions">
+            <div class="card-actions mt-auto">
               <a href="/services" class="btn btn-ghost text-primary group-hover:underline">
                 En savoir plus →
               </a>
@@ -65,10 +69,11 @@ const services = [
       ))}
     </div>
     
-    <div class="text-center mt-16">
+    <div class="text-center mt-10">
       <a href="/contact" class="btn btn-outline btn-lg rounded-full px-10 text-lg border-2">
         Discuter de mon projet
       </a>
     </div>
   </div>
 </section>
+

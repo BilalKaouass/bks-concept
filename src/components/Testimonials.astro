@@ -5,159 +5,92 @@ const testimonials = [
     role: "CEO - Fashion Luxe",
     content: "Notre site e-commerce créé par BKS Concept a multiplié nos ventes par 3. L'expérience utilisateur est exceptionnelle !",
     rating: 5,
-    image: "👩‍💼"
+    image: "ML"
   },
   {
     name: "Thomas Dubois",
     role: "Directeur - Tech Startup",
     content: "L'application web qu'ils ont développée pour nous a révolutionné notre productivité. Service client au top !",
     rating: 5,
-    image: "👨‍💻"
+    image: "TD"
   },
   {
     name: "Sophie Martin",
     role: "Restauratrice - Le Gourmet",
-    content: "Notre site vitrine attire maintenant 70% de clients en plus. Le design fait vraiment 'WAOW' comme promis !",
+    content: "Notre site vitrine attire maintenant 70% de clients en plus. Le design fait vraiment WAOW comme promis !",
     rating: 5,
-    image: "👩‍🍳"
+    image: "SM"
   },
   {
     name: "Alexandre Chen",
     role: "Founder - EduTech Pro",
     content: "Plateforme e-learning performante et intuitive. Les retours de nos étudiants sont excellents.",
     rating: 5,
-    image: "👨‍🏫"
+    image: "AC"
   },
   {
     name: "Camille Petit",
     role: "Manager - Immo Elite",
     content: "Le site avec visite virtuelle a totalement transformé notre business. Conversion +200% !",
     rating: 5,
-    image: "👩‍💼"
+    image: "CP"
   },
   {
     name: "Lucas Moreau",
     role: "CEO - FitLife App",
     content: "Application mobile innovante livrée dans les délais. L'équipe est réactive et professionnelle.",
     rating: 5,
-    image: "👨‍🔬"
+    image: "LM"
   }
 ];
+
+const marqueeTestimonials = [...testimonials, ...testimonials];
 ---
 
-<section class="py-20 bg-gradient-to-b from-base-100 to-base-200 neon-section">
-  <div class="container mx-auto px-4">
-    <div class="text-center max-w-3xl mx-auto mb-16">
-      <h2 class="text-4xl md:text-5xl font-bold mb-6">
+<section id="testimonials" class="relative py-24 bg-base-200 neon-section">
+  <div class="container mx-auto px-4 relative z-10">
+    <div class="text-center max-w-4xl mx-auto mb-16">
+      <h2 class="text-5xl md:text-6xl lg:text-7xl font-black leading-[0.95] mb-6 text-base-content">
         Ils Nous Font <span class="text-gradient">Confiance</span>
       </h2>
-      <p class="text-xl opacity-80">
+
+      <p class="text-lg md:text-xl text-base-content/70 max-w-2xl mx-auto">
         Découvrez ce que nos clients disent de leur expérience
       </p>
     </div>
+  </div>
 
-    <!-- Statistiques -->
-    <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16">
-      <div class="card bg-base-200 shadow-lg">
-        <div class="card-body items-center text-center">
-          <div class="text-4xl font-bold text-primary">4.9/5</div>
-          <div class="rating rating-sm">
-            <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" checked />
-            <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" checked />
-            <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" checked />
-            <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" checked />
-            <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" checked />
+  <!-- Défilement -->
+  <div class="relative z-10 marquee-wrapper">
+    <div class="marquee-track">
+      {marqueeTestimonials.map((testimonial) => (
+        <article class="testimonial-card">
+          <div class="flex gap-1 mb-4">
+            {Array.from({ length: testimonial.rating }).map(() => (
+              <span class="text-yellow-400 text-lg">★</span>
+            ))}
           </div>
-          <p class="text-sm opacity-80">Satisfaction client</p>
-        </div>
-      </div>
 
-      <div class="card bg-base-200 shadow-lg">
-        <div class="card-body items-center text-center">
-          <div class="text-4xl font-bold text-secondary">98%</div>
-          <p class="text-sm opacity-80">Clients satisfaits</p>
-        </div>
-      </div>
-
-      <div class="card bg-base-200 shadow-lg">
-        <div class="card-body items-center text-center">
-          <div class="text-4xl font-bold text-accent">50+</div>
-          <p class="text-sm opacity-80">Projets livrés</p>
-        </div>
-      </div>
-
-      <div class="card bg-base-200 shadow-lg">
-        <div class="card-body items-center text-center">
-          <div class="text-4xl font-bold text-primary">24/7</div>
-          <p class="text-sm opacity-80">Support client</p>
-        </div>
-      </div>
-    </div>
-
-    <!-- Témoignages -->
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
-      {testimonials.map((testimonial, index) => (
-        <div 
-          class="card bg-base-100 shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 group"
-        >
-          <div class="card-body p-8">
-            <!-- Étoiles -->
-            <div class="flex gap-1 mb-4">
-              {Array.from({ length: testimonial.rating }).map((_, i) => (
-                <span class="text-yellow-400 text-xl">★</span>
-              ))}
-            </div>
-
-            <!-- Citation -->
-            <p class="text-lg italic mb-8 opacity-90">
-              "{testimonial.content}"
-            </p>
-
-            <!-- Auteur -->
-            <div class="flex items-center gap-4">
-              <div class="avatar placeholder">
-                <div class="bg-primary/20 text-primary-content rounded-full w-14 h-14 text-2xl">
-                  <span>{testimonial.image}</span>
-                </div>
-              </div>
-              <div>
-                <h4 class="font-bold text-lg">{testimonial.name}</h4>
-                <p class="text-sm opacity-80">{testimonial.role}</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      ))}
-    </div>
-
-    <!-- Carousel Navigation (visuel seulement) -->
-    <div class="flex justify-center gap-3 mb-12">
-      <button class="btn btn-circle btn-sm btn-primary">←</button>
-      <div class="flex items-center gap-2">
-        {[1, 2, 3].map((_, i) => (
-          <button class={`btn btn-circle btn-xs ${i === 0 ? 'btn-primary' : 'btn-ghost'}`}>
-            {i + 1}
-          </button>
-        ))}
-      </div>
-      <button class="btn btn-circle btn-sm btn-primary">→</button>
-    </div>
-
-    <!-- CTA Témoignages -->
-    <div class="text-center">
-      <div class="card bg-gradient-to-r from-primary/10 to-secondary/10 border border-primary/20 max-w-2xl mx-auto">
-        <div class="card-body">
-          <h3 class="card-title text-2xl mb-4">Devenez notre prochain succès</h3>
-          <p class="mb-6">
-            Rejoignez nos clients satisfaits et transformez votre présence digitale
+          <p class="text-base-content/85 text-base leading-relaxed mb-6 min-h-[120px]">
+            "{testimonial.content}"
           </p>
-          <div class="card-actions justify-center">
-            <a href="/contact" class="btn btn-primary rounded-full px-10">
-              Témoigner bientôt ici
-            </a>
+
+          <div class="flex items-center gap-4">
+            <div class="testimonial-avatar">
+              <span>{testimonial.image}</span>
+            </div>
+
+            <div>
+              <h3 class="text-base-content font-bold text-lg leading-tight">
+                {testimonial.name}
+              </h3>
+              <p class="text-base-content/60 text-sm mt-1">
+                {testimonial.role}
+              </p>
+            </div>
           </div>
-        </div>
-      </div>
+        </article>
+      ))}
     </div>
   </div>
 </section>
@@ -168,5 +101,93 @@ const testimonials = [
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+  }
+
+  .marquee-wrapper {
+    overflow: hidden;
+    mask-image: linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%);
+    -webkit-mask-image: linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%);
+    padding-block: 8px;
+  }
+
+  .marquee-track {
+    display: flex;
+    gap: 1.25rem;
+    width: max-content;
+    animation: marqueeScroll 40s linear infinite;
+    padding: 0 1rem;
+  }
+
+  .marquee-wrapper:hover .marquee-track {
+    animation-play-state: paused;
+  }
+
+  .testimonial-card {
+    width: 360px;
+    min-width: 360px;
+    border-radius: 24px;
+    padding: 1.5rem;
+    background: linear-gradient(135deg, rgba(10, 18, 40, 0.94), rgba(8, 14, 30, 0.94));
+    border: 1px solid rgba(96, 165, 250, 0.14);
+    box-shadow:
+      0 10px 30px rgba(0, 0, 0, 0.22),
+      inset 0 1px 0 rgba(255,255,255,0.04);
+    transition: box-shadow 0.35s ease, border-color 0.35s ease, transform 0.35s ease;
+    backdrop-filter: blur(10px);
+  }
+
+  .testimonial-card:hover {
+    border-color: rgba(167, 139, 250, 0.24);
+    box-shadow:
+      0 16px 40px rgba(0, 0, 0, 0.28),
+      0 0 24px rgba(96, 165, 250, 0.06);
+    transform: scale(1.01);
+  }
+
+  .testimonial-avatar {
+    width: 52px;
+    height: 52px;
+    border-radius: 9999px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+    font-size: 1.2rem;
+    color: #0b1220;
+    background: linear-gradient(135deg, #ec4899 0%, #a855f7 40%, #60a5fa 75%, #67e8f9 100%);
+    flex-shrink: 0;
+  }
+
+  @keyframes marqueeScroll {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(calc(-50% - 0.625rem));
+    }
+  }
+
+  @media (max-width: 1024px) {
+    .testimonial-card {
+      width: 320px;
+      min-width: 320px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .marquee-track {
+      gap: 1rem;
+      animation-duration: 34s;
+    }
+
+    .testimonial-card {
+      width: 280px;
+      min-width: 280px;
+      padding: 1.25rem;
+    }
+
+    .testimonial-card p {
+      min-height: auto;
+    }
   }
 </style>
