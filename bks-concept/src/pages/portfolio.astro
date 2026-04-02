@@ -1,0 +1,71 @@
+---
+import Layout from '../layouts/Layout.astro';
+import PortfolioComponent from '../components/Portfolio.astro';
+import CTA from '../components/CTA.astro';
+---
+
+<Layout>
+  <!-- Hero Portfolio -->
+  <section class="hero min-h-[50vh] bg-gradient-to-br from-base-100 to-base-200">
+    <div class="hero-content text-center">
+      <div class="max-w-4xl">
+        <h1 class="text-5xl md:text-6xl font-bold mb-6">
+          Notre <span class="text-gradient">Portfolio</span>
+        </h1>
+        <p class="text-xl md:text-2xl opacity-80 mb-10 max-w-3xl mx-auto">
+          Découvrez nos réalisations qui ont marqué nos clients
+        </p>
+        <div class="flex flex-wrap justify-center gap-4">
+          <div class="badge badge-lg badge-primary">E-commerce</div>
+          <div class="badge badge-lg badge-secondary">Applications Web</div>
+          <div class="badge badge-lg badge-accent">Sites Vitrine</div>
+          <div class="badge badge-lg badge-primary">Mobile</div>
+          <div class="badge badge-lg badge-secondary">Plateformes</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Composant portfolio -->
+  <PortfolioComponent />
+  
+  <!-- Processus -->
+  <section class="py-20 bg-base-200">
+    <div class="container mx-auto px-4">
+      <h2 class="text-4xl font-bold text-center mb-12">Notre Processus Créatif</h2>
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div class="text-center">
+          <div class="text-4xl mb-4">1️⃣</div>
+          <h3 class="text-xl font-bold mb-2">Audit & Stratégie</h3>
+          <p class="opacity-80">Analyse de vos besoins et objectifs</p>
+        </div>
+        <div class="text-center">
+          <div class="text-4xl mb-4">2️⃣</div>
+          <h3 class="text-xl font-bold mb-2">Design & Prototype</h3>
+          <p class="opacity-80">Création de maquettes interactives</p>
+        </div>
+        <div class="text-center">
+          <div class="text-4xl mb-4">3️⃣</div>
+          <h3 class="text-xl font-bold mb-2">Développement</h3>
+          <p class="opacity-80">Codage et intégration technique</p>
+        </div>
+        <div class="text-center">
+          <div class="text-4xl mb-4">4️⃣</div>
+          <h3 class="text-xl font-bold mb-2">Livraison & Support</h3>
+          <p class="opacity-80">Mise en ligne et maintenance</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <CTA />
+</Layout>
+
+<style>
+  .text-gradient {
+    background: linear-gradient(90deg, #3B82F6, #8B5CF6, #EC4899);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+</style>

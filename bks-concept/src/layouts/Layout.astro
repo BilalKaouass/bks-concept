@@ -1,0 +1,41 @@
+---
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import '../styles/global.css';
+---
+
+<!DOCTYPE html>
+<html lang="fr" data-theme="bksconcept">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BKS Concept - Création de Sites Web Professionnels</title>
+    
+    <!-- Favicon .ico (compatible tous navigateurs) -->
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    
+    <!-- Favicon SVG pour les navigateurs modernes (optionnel) -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    
+	<!-- Avec version pour casser le cache -->
+	<link rel="icon" href="/favicon.ico?v=2">
+
+    <!-- Pour iOS/Safari -->
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    
+    <meta name="description" content="BKS Concept crée des sites web professionnels et impactants qui font dire 'WAOW' à vos clients. Design percutant, développement sur mesure." />
+    
+    <!-- Couleur de thème pour les navigateurs mobiles -->
+    <meta name="theme-color" content="#0F172A">
+  </head>
+  <body class="min-h-screen bg-base-100">
+    <Header />
+    <main class="flex-grow">
+      <slot />
+    </main>
+    <Footer />
+    
+    <!-- Scripts JS -->
+    <script src="/js/animations.js" defer></script>
+  </body>
+</html>

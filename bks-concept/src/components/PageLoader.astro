@@ -1,0 +1,84 @@
+<div id="page-loader" class="fixed inset-0 z-[9999] flex items-center justify-center bg-[#020817] transition-opacity duration-700">
+  <div class="flex flex-col items-center justify-center px-6">
+    <h1 class="loader-logo select-none text-center uppercase">
+      BKS CONCEPT
+    </h1>
+
+    <div class="mt-10 w-[180px] md:w-[260px] h-[3px] rounded-full overflow-hidden bg-white/5">
+      <div class="loader-line h-full w-full rounded-full"></div>
+    </div>
+  </div>
+</div>
+
+<script is:inline>
+  (() => {
+    const LOADER_KEY = "bks_loader_seen";
+    const MIN_LOADER_TIME = 1800;
+    const loader = document.getElementById("page-loader");
+
+    if (!loader) return;
+
+    const alreadySeen = sessionStorage.getItem(LOADER_KEY);
+
+    // Si le loader a déjà été vu dans cette session, on l'enlève immédiatement
+    if (alreadySeen) {
+      loader.remove();
+      return;
+    }
+
+    // On marque le loader comme déjà vu pour cette session
+    sessionStorage.setItem(LOADER_KEY, "true");
+
+    const start = Date.now();
+
+    function hideLoader() {
+      const elapsed = Date.now() - start;
+      const remaining = Math.max(0, MIN_LOADER_TIME - elapsed);
+
+      setTimeout(() => {
+        loader.classList.add("opacity-0", "pointer-events-none");
+        setTimeout(() => {
+          loader.remove();
+        }, 700);
+      }, remaining);
+    }
+
+    if (document.readyState === "complete") {
+      hideLoader();
+    } else {
+      window.addEventListener("load", hideLoader, { once: true });
+    }
+  })();
+</script>
+
+<style>
+  .loader-logo {
+    font-size: clamp(3rem, 9vw, 8rem);
+    font-weight: 900;
+    line-height: 1;
+    letter-spacing: 0.08em;
+    background: linear-gradient(90deg, #ec4899 0%, #a855f7 35%, #7c3aed 55%, #60a5fa 78%, #67e8f9 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-shadow: 0 0 30px rgba(168, 85, 247, 0.08);
+  }
+
+  .loader-line {
+    background: linear-gradient(90deg, #67e8f9 0%, #60a5fa 35%, #a78bfa 70%, #e879f9 100%);
+    transform-origin: left center;
+    animation: loaderProgress 1.6s ease forwards;
+    box-shadow: 0 0 18px rgba(96, 165, 250, 0.35);
+  }
+
+  @keyframes loaderProgress {
+    0% {
+      transform: scaleX(0);
+      opacity: 0.7;
+    }
+    100% {
+      transform: scaleX(1);
+      opacity: 1;
+    }
+  }
+</style>
