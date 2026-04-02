@@ -1,0 +1,42 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout>
+  <section class="hero min-h-screen bg-gradient-to-br from-primary/10 to-secondary/10 px-4">
+    <div class="hero-content text-center">
+      <div class="max-w-2xl">
+        <div class="card bg-base-100 shadow-2xl border border-base-200">
+          <div class="card-body p-10 md:p-14">
+            <div class="text-6xl mb-6">✅</div>
+
+            <h1 class="text-4xl md:text-5xl font-bold mb-6 text-green-600">
+              Message envoyé !
+            </h1>
+
+            <p class="text-lg md:text-xl opacity-80 mb-8">
+              Merci pour votre message. Nous vous répondrons dans les 24 heures.
+            </p>
+
+            <div class="bg-base-200 rounded-2xl p-6 mb-8">
+              <p class="text-base md:text-lg">
+                Votre demande a bien été transmise à notre équipe. Vous pouvez revenir à l’accueil
+                ou retourner sur la page contact.
+              </p>
+            </div>
+
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+              <a href="/" class="btn btn-primary btn-lg rounded-full">
+                Retour à l'accueil
+              </a>
+
+              <a href="/contact" class="btn btn-outline btn-lg rounded-full">
+                Retour au formulaire
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>
