@@ -2,6 +2,44 @@
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import '../styles/global.css';
+
+interface Props {
+  title?: string;
+  description?: string;
+  image?: string;
+  canonical?: string;
+  noindex?: boolean;
+}
+
+const {
+  title = 'BKS Concept | Création de site web professionnel à Charleroi',
+  description = 'BKS Concept crée des sites web professionnels à Charleroi : site vitrine, e-commerce, refonte et présence en ligne moderne pour indépendants, entreprises et marques.',
+  image = 'https://bksconcept.netlify.app/favicon.svg',
+  canonical,
+  noindex = false
+} = Astro.props;
+
+const siteUrl = 'https://bksconcept.netlify.app';
+const currentUrl = canonical ?? new URL(Astro.url.pathname, siteUrl).toString();
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'ProfessionalService',
+  name: 'BKS Concept',
+  url: siteUrl,
+  logo: `${siteUrl}/apple-touch-icon.png`,
+  image,
+  description,
+  email: 'bksconcept@gmail.com',
+  telephone: '+32484243646',
+  areaServed: ['Belgique', 'France', 'Europe'],
+  address: {
+    '@type': 'PostalAddress',
+    addressLocality: 'Charleroi',
+    addressCountry: 'BE'
+  },
+  sameAs: []
+};
 ---
 
 <!DOCTYPE html>
@@ -9,33 +47,49 @@ import '../styles/global.css';
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>BKS Concept - Création de Sites Web Professionnels</title>
-    
-    <!-- Favicon .ico (compatible tous navigateurs) -->
-    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
-    
-    <!-- Favicon SVG pour les navigateurs modernes (optionnel) -->
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
-    
-	<!-- Avec version pour casser le cache -->
-	<link rel="icon" href="/favicon.ico?v=2">
 
-    <!-- Pour iOS/Safari -->
-    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-    
-    <meta name="description" content="BKS Concept crée des sites web professionnels et impactants qui font dire 'WAOW' à vos clients. Design percutant, développement sur mesure." />
-    
-    <!-- Couleur de thème pour les navigateurs mobiles -->
-    <meta name="theme-color" content="#0F172A">
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta name="author" content="BKS Concept" />
+    <meta name="robots" content={noindex ? 'noindex, nofollow' : 'index, follow'} />
+
+    <link rel="canonical" href={currentUrl} />
+
+    <!-- Favicons -->
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" href="/favicon.ico?v=2" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+
+    <!-- Theme color -->
+    <meta name="theme-color" content="#0F172A" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="fr_BE" />
+    <meta property="og:site_name" content="BKS Concept" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={currentUrl} />
+    <meta property="og:image" content={image} />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={image} />
+
+    <!-- Données structurées -->
+    <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
   </head>
+
   <body class="min-h-screen bg-base-100">
     <Header />
     <main class="flex-grow">
       <slot />
     </main>
     <Footer />
-    
-    <!-- Scripts JS -->
+
     <script src="/js/animations.js" defer></script>
   </body>
 </html>

@@ -10,6 +10,7 @@
     "astro": "astro"
   },
   "dependencies": {
+    "@astrojs/sitemap": "^3.7.2",
     "framer-motion": "^10.16.4"
   },
   "devDependencies": {

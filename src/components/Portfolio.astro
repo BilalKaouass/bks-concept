@@ -4,7 +4,7 @@ const projects = [
     title: "Autosoftronics",
     category: "Site vitrine",
     description:
-      "Conception d’un site professionnel pour un spécialiste en électronique automobile, avec une présentation claire des services, une structure rassurante et une prise de contact simplifiée.",
+      "Création d’un site professionnel pour un spécialiste en électronique automobile, avec une présentation claire des services, une structure rassurante et une prise de contact simplifiée.",
     image: "/images/projects/autosoftronics.jpg",
     tags: ["Astro", "Tailwind", "SEO", "UX"],
     features: [
@@ -18,7 +18,7 @@ const projects = [
     title: "Greenfarmerz",
     category: "Site vitrine",
     description:
-      "Réalisation d’un site orienté conversion pour une entreprise active dans les solutions énergétiques, avec mise en avant des prestations, des formulaires de contact et d’un discours plus crédible.",
+      "Réalisation d’un site orienté conversion pour une entreprise active dans les solutions énergétiques, avec mise en avant des prestations et de la prise de contact.",
     image: "/images/projects/greenfarmerz.jpg",
     tags: ["Web Design", "UX", "Responsive", "Conversion"],
     features: [
@@ -39,8 +39,7 @@ const projects = [
       </h2>
 
       <p class="text-lg md:text-xl text-base-content/70 leading-relaxed">
-        Des projets réels, conçus pour valoriser l’image de nos clients,
-        clarifier leur offre et faciliter la prise de contact.
+        Des projets conçus pour valoriser l’image de marque, clarifier l’offre et faciliter la conversion.
       </p>
     </div>
 
@@ -50,8 +49,9 @@ const projects = [
           <div class="relative h-64 md:h-80 overflow-hidden">
             <img
               src={project.image}
-              alt={project.title}
+              alt={`Projet web ${project.title}`}
               class="w-full h-full object-cover group-hover:scale-[1.04] transition-transform duration-700"
+              loading="lazy"
             />
             <div class="absolute inset-0 bg-gradient-to-t from-[#020817]/70 via-transparent to-transparent"></div>
 
@@ -117,12 +117,11 @@ const projects = [
 
     <div class="rounded-[28px] border border-base-300/60 bg-base-200 px-8 py-10 md:px-12 md:py-12 text-center shadow-[0_10px_40px_rgba(0,0,0,0.08)]">
       <h3 class="text-2xl md:text-3xl font-bold mb-4">
-        Votre projet pourrait être le prochain.
+        Votre projet peut être le prochain.
       </h3>
 
       <p class="text-base md:text-lg text-base-content/70 max-w-2xl mx-auto mb-8 leading-relaxed">
-        Vous souhaitez moderniser votre image, créer un site plus premium
-        ou améliorer votre présence en ligne ? Parlons de votre besoin.
+        Vous souhaitez créer un site plus moderne, plus crédible et plus efficace pour votre activité ? Parlons de votre besoin.
       </p>
 
       <a

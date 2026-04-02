@@ -1,46 +1,25 @@
 ---
 const testimonials = [
   {
-    name: "Marie Laurent",
-    role: "CEO - Fashion Luxe",
-    content: "Notre site e-commerce créé par BKS Concept a multiplié nos ventes par 3. L'expérience utilisateur est exceptionnelle !",
+    name: "Client BKS Concept",
+    role: "Projet site vitrine",
+    content: "Un accompagnement sérieux, un design propre et un site plus clair pour présenter notre activité.",
     rating: 5,
-    image: "ML"
+    image: "CB"
   },
   {
-    name: "Thomas Dubois",
-    role: "Directeur - Tech Startup",
-    content: "L'application web qu'ils ont développée pour nous a révolutionné notre productivité. Service client au top !",
+    name: "Client BKS Concept",
+    role: "Projet refonte",
+    content: "La refonte a permis de moderniser notre image et de rendre notre site plus rassurant pour nos prospects.",
     rating: 5,
-    image: "TD"
+    image: "CB"
   },
   {
-    name: "Sophie Martin",
-    role: "Restauratrice - Le Gourmet",
-    content: "Notre site vitrine attire maintenant 70% de clients en plus. Le design fait vraiment WAOW comme promis !",
+    name: "Client BKS Concept",
+    role: "Projet professionnel",
+    content: "Très bon échange du début à la fin. Le site est plus structuré, plus lisible et plus professionnel.",
     rating: 5,
-    image: "SM"
-  },
-  {
-    name: "Alexandre Chen",
-    role: "Founder - EduTech Pro",
-    content: "Plateforme e-learning performante et intuitive. Les retours de nos étudiants sont excellents.",
-    rating: 5,
-    image: "AC"
-  },
-  {
-    name: "Camille Petit",
-    role: "Manager - Immo Elite",
-    content: "Le site avec visite virtuelle a totalement transformé notre business. Conversion +200% !",
-    rating: 5,
-    image: "CP"
-  },
-  {
-    name: "Lucas Moreau",
-    role: "CEO - FitLife App",
-    content: "Application mobile innovante livrée dans les délais. L'équipe est réactive et professionnelle.",
-    rating: 5,
-    image: "LM"
+    image: "CB"
   }
 ];
 
@@ -51,16 +30,15 @@ const marqueeTestimonials = [...testimonials, ...testimonials];
   <div class="container mx-auto px-4 relative z-10">
     <div class="text-center max-w-4xl mx-auto mb-16">
       <h2 class="text-5xl md:text-6xl lg:text-7xl font-black leading-[0.95] mb-6 text-base-content">
-        Ils Nous Font <span class="text-gradient">Confiance</span>
+        Une relation basée sur la <span class="text-gradient">confiance</span>
       </h2>
 
       <p class="text-lg md:text-xl text-base-content/70 max-w-2xl mx-auto">
-        Découvrez ce que nos clients disent de leur expérience
+        Quelques retours sur l’expérience client et la qualité d’accompagnement.
       </p>
     </div>
   </div>
 
-  <!-- Défilement -->
   <div class="relative z-10 marquee-wrapper">
     <div class="marquee-track">
       {marqueeTestimonials.map((testimonial) => (

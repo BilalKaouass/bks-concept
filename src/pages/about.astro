@@ -3,7 +3,11 @@ import Layout from '../layouts/Layout.astro';
 import CTA from '../components/CTA.astro';
 ---
 
-<Layout>
+<Layout
+  title="À propos | BKS Concept, création de site web à Charleroi"
+  description="Découvrez BKS Concept, son fondateur et sa vision : concevoir des sites web professionnels, performants et orientés résultats pour les entreprises en Belgique et à distance."
+  canonical="https://bksconcept.netlify.app/about"
+>
   <!-- Hero About -->
   <section class="hero min-h-[60vh] bg-gradient-to-br from-base-100 to-base-200">
     <div class="hero-content text-center">
@@ -12,7 +16,7 @@ import CTA from '../components/CTA.astro';
           À propos de <span class="text-gradient">BKS Concept</span>
         </h1>
         <p class="text-xl md:text-2xl opacity-80 mb-10 max-w-3xl mx-auto">
-          Nous créons des expériences digitales qui transforment les visiteurs en clients fidèles
+          Une approche web moderne, humaine et orientée résultats pour aider les entreprises à mieux se présenter en ligne.
         </p>
       </div>
     </div>
@@ -23,62 +27,63 @@ import CTA from '../components/CTA.astro';
     <div class="container mx-auto px-4">
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
         <div>
-          <h2 class="text-4xl font-bold mb-6">Notre Histoire</h2>
+          <h2 class="text-4xl font-bold mb-6">Notre histoire</h2>
           <p class="text-lg opacity-80 mb-6">
-            Fondée en 2023, BKS Concept est née d'une passion pour le design web et l'innovation digitale. 
-            Notre mission : créer des sites web qui font dire "WAOW" à vos clients.
+            Fondée en 2023, BKS Concept est née d’une volonté simple : proposer des sites web professionnels,
+            modernes et stratégiques, capables de renforcer la crédibilité d’une marque et de soutenir son développement.
           </p>
           <p class="text-lg opacity-80 mb-6">
-            Nous croyons qu'un site web n'est pas juste une vitrine en ligne, mais une expérience 
-            immersive qui doit captiver, engager et convertir.
+            Nous considérons qu’un site internet n’est pas une simple présence en ligne. C’est un outil de communication,
+            de conversion et de différenciation qui doit être pensé avec soin.
           </p>
-          <!-- Statistiques responsive -->
-<div class="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 max-w-3xl mx-auto">
-  <div class="card bg-base-200 shadow-lg">
-    <div class="card-body items-center text-center p-4 sm:p-6">
-      <div class="text-2xl sm:text-3xl md:text-4xl font-bold text-primary mb-2">3+</div>
-      <div class="stat-title text-xs sm:text-sm md:text-base">Années d'expérience</div>
-    </div>
-  </div>
-  
-  <div class="card bg-base-200 shadow-lg">
-    <div class="card-body items-center text-center p-4 sm:p-6">
-      <div class="text-2xl sm:text-3xl md:text-4xl font-bold text-secondary mb-2">50+</div>
-      <div class="stat-title text-xs sm:text-sm md:text-base">Projets livrés</div>
-    </div>
-  </div>
-  
-  <div class="card bg-base-200 shadow-lg">
-    <div class="card-body items-center text-center p-4 sm:p-6">
-      <div class="text-2xl sm:text-3xl md:text-4xl font-bold text-accent mb-2">98%</div>
-      <div class="stat-title text-xs sm:text-sm md:text-base">Clients satisfaits</div>
-    </div>
-  </div>
-</div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 max-w-3xl mx-auto">
+            <div class="card bg-base-200 shadow-lg">
+              <div class="card-body items-center text-center p-4 sm:p-6">
+                <div class="text-2xl sm:text-3xl md:text-4xl font-bold text-primary mb-2">3+</div>
+                <div class="stat-title text-xs sm:text-sm md:text-base">Années d'expérience</div>
+              </div>
+            </div>
+            
+            <div class="card bg-base-200 shadow-lg">
+              <div class="card-body items-center text-center p-4 sm:p-6">
+                <div class="text-2xl sm:text-3xl md:text-4xl font-bold text-secondary mb-2">50+</div>
+                <div class="stat-title text-xs sm:text-sm md:text-base">Projets livrés</div>
+              </div>
+            </div>
+            
+            <div class="card bg-base-200 shadow-lg">
+              <div class="card-body items-center text-center p-4 sm:p-6">
+                <div class="text-2xl sm:text-3xl md:text-4xl font-bold text-accent mb-2">98%</div>
+                <div class="stat-title text-xs sm:text-sm md:text-base">Clients satisfaits</div>
+              </div>
+            </div>
+          </div>
         </div>
+
         <div class="card bg-base-200 shadow-xl">
           <div class="card-body p-8">
-            <h3 class="card-title text-2xl mb-6">Notre Philosophie</h3>
+            <h3 class="card-title text-2xl mb-6">Notre philosophie</h3>
             <div class="space-y-4">
               <div class="flex items-start gap-4">
                 <div class="text-2xl">🎯</div>
                 <div>
                   <h4 class="font-bold">Design centré utilisateur</h4>
-                  <p class="opacity-80">Nous plaçons l'expérience utilisateur au cœur de chaque création</p>
+                  <p class="opacity-80">Chaque interface est pensée pour être claire, agréable et facile à utiliser.</p>
                 </div>
               </div>
               <div class="flex items-start gap-4">
                 <div class="text-2xl">⚡</div>
                 <div>
-                  <h4 class="font-bold">Performance optimale</h4>
-                  <p class="opacity-80">Des sites rapides, sécurisés et optimisés pour le SEO</p>
+                  <h4 class="font-bold">Performance et visibilité</h4>
+                  <p class="opacity-80">Nous créons des sites rapides, responsives et structurés pour une bonne base SEO.</p>
                 </div>
               </div>
               <div class="flex items-start gap-4">
                 <div class="text-2xl">🤝</div>
                 <div>
                   <h4 class="font-bold">Collaboration transparente</h4>
-                  <p class="opacity-80">Vous êtes impliqué à chaque étape du processus</p>
+                  <p class="opacity-80">Nous avançons avec vous de façon claire, simple et efficace à chaque étape.</p>
                 </div>
               </div>
             </div>
@@ -88,33 +93,30 @@ import CTA from '../components/CTA.astro';
     </div>
   </section>
 
-    <!-- Équipe - Bilal.K -->
+  <!-- Équipe - Bilal.K -->
   <section class="py-20 bg-base-200">
     <div class="container mx-auto px-4">
-      <h2 class="text-4xl font-bold text-center mb-12">Notre Fondateur</h2>
+      <h2 class="text-4xl font-bold text-center mb-12">Le fondateur de BKS Concept</h2>
       <div class="flex justify-center">
         <div class="card bg-base-100 shadow-xl max-w-md">
           <div class="card-body items-center text-center p-8">
-            <!-- Avatar/Photo -->
             <div class="avatar placeholder mb-6">
               <div class="bg-gradient-to-br from-primary to-secondary text-primary-content rounded-full w-32 h-32 text-4xl">
                 <span>BK</span>
               </div>
             </div>
             
-            <!-- Nom et titre -->
-            <h3 class="card-title text-2xl mb-2">Bilal.K</h3>
+            <h3 class="card-title text-2xl mb-2">Bilal K.</h3>
             <div class="flex flex-col gap-2 mb-6">
-              <div class="badge badge-primary badge-lg">CEO & Fondateur</div>
-              <div class="badge badge-secondary badge-lg">Lead Développeur</div>
+              <div class="badge badge-primary badge-lg">Fondateur</div>
+              <div class="badge badge-secondary badge-lg">Développeur web</div>
             </div>
             
-            <!-- Description -->
             <p class="opacity-80 mb-6">
-              Passionné par le développement web et l'innovation digitale, je combine expertise technique et vision stratégique pour créer des solutions web sur mesure qui transforment les businesses.
+              Passionné par le développement web, le design d’interface et la stratégie digitale,
+              je conçois des solutions sur mesure pour aider les entreprises à mieux communiquer, rassurer et convertir en ligne.
             </p>
             
-            <!-- Compétences -->
             <div class="w-full mb-6">
               <h4 class="font-bold mb-4 text-center">Expertises principales</h4>
               <div class="flex flex-wrap justify-center gap-2">
@@ -127,7 +129,6 @@ import CTA from '../components/CTA.astro';
               </div>
             </div>
             
-            <!-- Contact -->
             <div class="card-actions justify-center">
               <a href="/contact" class="btn btn-primary">
                 <span>Me contacter</span>
@@ -138,24 +139,23 @@ import CTA from '../components/CTA.astro';
         </div>
       </div>
       
-      <!-- Philosophie personnelle -->
       <div class="mt-16 text-center max-w-2xl mx-auto">
-        <h3 class="text-2xl font-bold mb-6">Ma Philosophie</h3>
+        <h3 class="text-2xl font-bold mb-6">Ma philosophie</h3>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div class="flex flex-col items-center p-4">
             <div class="text-4xl mb-4">🎯</div>
-            <h4 class="font-bold mb-2">Vision Claire</h4>
-            <p class="text-sm opacity-80">Chaque projet commence par une compréhension approfondie de vos objectifs business</p>
+            <h4 class="font-bold mb-2">Vision claire</h4>
+            <p class="text-sm opacity-80">Chaque projet démarre par une vraie compréhension de vos objectifs et de votre positionnement.</p>
           </div>
           <div class="flex flex-col items-center p-4">
             <div class="text-4xl mb-4">⚡</div>
-            <h4 class="font-bold mb-2">Exécution Rapide</h4>
-            <p class="text-sm opacity-80">Développement agile avec des livrables réguliers et transparents</p>
+            <h4 class="font-bold mb-2">Exécution soignée</h4>
+            <p class="text-sm opacity-80">Une méthode simple, structurée et efficace pour livrer un site de qualité.</p>
           </div>
           <div class="flex flex-col items-center p-4">
             <div class="text-4xl mb-4">🤝</div>
-            <h4 class="font-bold mb-2">Partnership</h4>
-            <p class="text-sm opacity-80">Je suis votre partenaire tech, pas juste un prestataire</p>
+            <h4 class="font-bold mb-2">Relation durable</h4>
+            <p class="text-sm opacity-80">L’objectif est de construire une collaboration de confiance, pas seulement de livrer un site.</p>
           </div>
         </div>
       </div>

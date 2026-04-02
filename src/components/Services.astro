@@ -1,28 +1,28 @@
 ---
 const services = [
   {
-    title: "Sites Web Vitrine",
-    description: "Présentez votre entreprise en ligne avec un site moderne, clair et professionnel qui reflète votre identité.",
+    title: "Site Web Vitrine",
+    description: "Présentez votre entreprise avec un site moderne, rassurant et structuré pour mettre en valeur vos services et générer des demandes de contact.",
     icon: "🎨",
-    features: ["Design sur mesure", "Responsive design", "SEO optimisé", "Hébergement inclus"]
+    features: ["Design sur mesure", "Responsive design", "Base SEO", "Mise en ligne"]
   },
   {
-    title: "Sites E-commerce",
-    description: "Vendez vos produits en ligne grâce à une boutique fluide, rassurante et pensée pour convertir.",
+    title: "Site E-commerce",
+    description: "Vendez vos produits en ligne avec une boutique claire, fluide et pensée pour rassurer l’utilisateur à chaque étape du parcours d’achat.",
     icon: "🛒",
-    features: ["Paiement sécurisé", "Gestion des stocks", "Analytics intégrés", "Mobile-first"]
+    features: ["Paiement sécurisé", "Catalogue produits", "Parcours de commande", "Mobile-first"]
   },
   {
-    title: "Applications Web",
-    description: "Développement d’applications sur mesure pour répondre à des besoins spécifiques et améliorer vos process.",
+    title: "Application Web",
+    description: "Développement d’outils et plateformes sur mesure pour répondre à des besoins spécifiques et gagner en efficacité.",
     icon: "⚡",
-    features: ["Développement sur mesure", "API intégration", "Base de données", "Maintenance"]
+    features: ["Développement sur mesure", "Base de données", "API", "Maintenance possible"]
   },
   {
     title: "Refonte de Site",
-    description: "Modernisez votre site existant pour améliorer son image, son expérience utilisateur et ses performances.",
+    description: "Modernisez un site existant pour améliorer son image, son ergonomie, sa vitesse et sa capacité à convertir.",
     icon: "🔄",
-    features: ["Audit technique", "Modernisation UI/UX", "Optimisation SEO", "Migration"]
+    features: ["Audit", "Modernisation UI/UX", "Optimisation SEO", "Migration"]
   }
 ];
 ---
@@ -31,14 +31,16 @@ const services = [
   <div class="container mx-auto px-4">
     <div class="text-center max-w-3xl mx-auto mb-16">
       <h2 class="text-4xl md:text-5xl font-bold mb-6">
-        Nos Services <span class="text-primary">Créatifs</span>
+        Nos Services <span class="text-primary">Web</span>
       </h2>
-      
+      <p class="text-lg md:text-xl opacity-80">
+        Des prestations pensées pour améliorer votre image, clarifier votre offre et renforcer votre présence en ligne.
+      </p>
     </div>
-    
+
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
       {services.map((service) => (
-        <div class="card bg-base-100 shadow-xl card-3d group hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 h-full">
+        <article class="card bg-base-100 shadow-xl card-3d group hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 h-full">
           <div class="card-body p-8 flex flex-col h-full">
             <div class="text-5xl mb-4 transform group-hover:scale-110 transition-transform duration-300">
               {service.icon}
@@ -49,7 +51,7 @@ const services = [
             <p class="opacity-80 mb-6">
               {service.description}
             </p>
-            
+
             <ul class="space-y-2 mb-6">
               {service.features.map((feature) => (
                 <li class="flex items-center">
@@ -58,17 +60,17 @@ const services = [
                 </li>
               ))}
             </ul>
-            
+
             <div class="card-actions mt-auto">
               <a href="/services" class="btn btn-ghost text-primary group-hover:underline">
                 En savoir plus →
               </a>
             </div>
           </div>
-        </div>
+        </article>
       ))}
     </div>
-    
+
     <div class="text-center mt-10">
       <a href="/contact" class="btn btn-outline btn-lg rounded-full px-10 text-lg border-2">
         Discuter de mon projet
@@ -76,4 +78,3 @@ const services = [
     </div>
   </div>
 </section>
-

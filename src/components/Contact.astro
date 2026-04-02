@@ -9,7 +9,7 @@
         Parlons de <span class="text-gradient">Votre Projet</span>
       </h2>
       <p class="text-xl opacity-80">
-        Remplissez ce formulaire et nous vous répondrons dans les 24h
+        Décrivez-nous votre besoin, nous vous répondrons rapidement avec un retour clair et personnalisé.
       </p>
     </div>
 
@@ -17,7 +17,7 @@
       <div class="card bg-base-200 shadow-xl">
         <div class="card-body p-8">
           <form id="contact-form" class="space-y-6">
-            <input type="hidden" name="access_key" value="4cfddd4e-902b-46f9-8634-75ab10366e71" />
+            <input type="hidden" name="access_key" value="REMPLACE_ICI_PAR_TA_CLE_WEB3FORMS" />
             <input type="hidden" name="subject" value="Nouvelle demande depuis BKS Concept" />
             <input type="hidden" name="from_name" value="Site BKS Concept" />
 
@@ -31,10 +31,11 @@
             />
 
             <div class="form-control">
-              <label class="label">
+              <label class="label" for="nom_complet">
                 <span class="label-text text-lg">Votre nom complet *</span>
               </label>
               <input
+                id="nom_complet"
                 type="text"
                 name="nom_complet"
                 placeholder="John Doe"
@@ -44,10 +45,11 @@
             </div>
 
             <div class="form-control">
-              <label class="label">
+              <label class="label" for="email">
                 <span class="label-text text-lg">Votre email *</span>
               </label>
               <input
+                id="email"
                 type="email"
                 name="email"
                 placeholder="contact@entreprise.fr"
@@ -57,10 +59,11 @@
             </div>
 
             <div class="form-control">
-              <label class="label">
+              <label class="label" for="telephone">
                 <span class="label-text text-lg">Téléphone</span>
               </label>
               <input
+                id="telephone"
                 type="tel"
                 name="telephone"
                 placeholder="+32 4 84 24 36 46"
@@ -69,10 +72,11 @@
             </div>
 
             <div class="form-control">
-              <label class="label">
+              <label class="label" for="type_projet">
                 <span class="label-text text-lg">Type de projet *</span>
               </label>
               <select
+                id="type_projet"
                 name="type_projet"
                 class="select select-bordered select-lg bg-base-100"
                 required
@@ -87,10 +91,11 @@
             </div>
 
             <div class="form-control">
-              <label class="label">
+              <label class="label" for="budget">
                 <span class="label-text text-lg">Budget estimé *</span>
               </label>
               <select
+                id="budget"
                 name="budget"
                 class="select select-bordered select-lg bg-base-100"
                 required
@@ -106,10 +111,11 @@
             </div>
 
             <div class="form-control">
-              <label class="label">
+              <label class="label" for="message">
                 <span class="label-text text-lg">Décrivez votre projet *</span>
               </label>
               <textarea
+                id="message"
                 name="message"
                 class="textarea textarea-bordered textarea-lg bg-base-100 h-40"
                 placeholder="Parlez-nous de votre projet, vos objectifs, vos délais..."
@@ -140,7 +146,7 @@
                 </div>
                 <div>
                   <p class="font-bold">Email</p>
-                  <a href="mailto:contact@bksconcept.fr" class="link link-hover text-primary">
+                  <a href="mailto:bksconcept@gmail.com" class="link link-hover text-primary">
                     bksconcept@gmail.com
                   </a>
                 </div>
@@ -163,7 +169,7 @@
                   <span class="text-primary text-xl">📍</span>
                 </div>
                 <div>
-                  <p class="font-bold">Adresse</p>
+                  <p class="font-bold">Localisation</p>
                   <p>Charleroi<br />Belgique</p>
                 </div>
               </div>
@@ -181,17 +187,17 @@
                   Quel est le délai moyen de création ?
                 </div>
                 <div class="collapse-content">
-                  <p>Un site vitrine simple : 2-3 semaines. E-commerce : 4-6 semaines. Application web : sur devis.</p>
+                  <p>Un site vitrine simple peut être livré en 2 à 3 semaines. Un e-commerce demande généralement 4 à 6 semaines. Pour une application web, le délai dépend du périmètre fonctionnel.</p>
                 </div>
               </div>
 
               <div class="collapse collapse-plus bg-base-100">
                 <input type="radio" name="faq" />
                 <div class="collapse-title text-lg font-medium">
-                  Proposez-vous l'hébergement ?
+                  Proposez-vous l’hébergement et la maintenance ?
                 </div>
                 <div class="collapse-content">
-                  <p>Oui ! Nous offrons l'hébergement, la maintenance et le support technique.</p>
+                  <p>Oui, nous pouvons vous accompagner sur l’hébergement, la maintenance technique, les mises à jour et le suivi après mise en ligne.</p>
                 </div>
               </div>
 
@@ -201,7 +207,7 @@
                   Travaillez-vous à distance ?
                 </div>
                 <div class="collapse-content">
-                  <p>Absolument ! Nous travaillons avec des clients partout en France et en Europe.</p>
+                  <p>Oui. Nous travaillons à Charleroi, partout en Belgique, en France et à distance selon la nature du projet.</p>
                 </div>
               </div>
             </div>

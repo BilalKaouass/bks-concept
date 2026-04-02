@@ -4,7 +4,11 @@ import PortfolioComponent from '../components/Portfolio.astro';
 import CTA from '../components/CTA.astro';
 ---
 
-<Layout>
+<Layout
+  title="Portfolio web | Réalisations de sites professionnels | BKS Concept"
+  description="Découvrez le portfolio de BKS Concept : créations de sites vitrines, projets e-commerce et réalisations web modernes conçues pour renforcer l’image de marque et convertir."
+  canonical="https://bksconcept.netlify.app/portfolio"
+>
   <!-- Hero Portfolio -->
   <section class="hero min-h-[50vh] bg-gradient-to-br from-base-100 to-base-200">
     <div class="hero-content text-center">
@@ -13,16 +17,33 @@ import CTA from '../components/CTA.astro';
           Notre <span class="text-gradient">Portfolio</span>
         </h1>
         <p class="text-xl md:text-2xl opacity-80 mb-10 max-w-3xl mx-auto">
-          Découvrez nos réalisations qui ont marqué nos clients
+          Découvrez quelques réalisations web pensées pour valoriser l’image de marque et soutenir les objectifs business de nos clients.
         </p>
         <div class="flex flex-wrap justify-center gap-4">
           <div class="badge badge-lg badge-primary">E-commerce</div>
           <div class="badge badge-lg badge-secondary">Applications Web</div>
           <div class="badge badge-lg badge-accent">Sites Vitrine</div>
-          <div class="badge badge-lg badge-primary">Mobile</div>
-          <div class="badge badge-lg badge-secondary">Plateformes</div>
+          <div class="badge badge-lg badge-primary">UX/UI</div>
+          <div class="badge badge-lg badge-secondary">Sur mesure</div>
         </div>
       </div>
+    </div>
+  </section>
+
+  <!-- Intro SEO -->
+  <section class="py-16">
+    <div class="container mx-auto px-4 max-w-4xl text-center">
+      <h2 class="text-3xl md:text-4xl font-bold mb-6">
+        Des projets web conçus pour durer
+      </h2>
+      <p class="text-lg opacity-80 mb-4">
+        Chaque réalisation présentée ici reflète notre approche : un design moderne, une structure claire,
+        une expérience utilisateur fluide et un développement pensé pour la performance.
+      </p>
+      <p class="text-lg opacity-80">
+        Que ce soit pour une entreprise locale, une marque ou un projet digital plus ambitieux,
+        notre objectif reste le même : créer un site web utile, crédible et efficace.
+      </p>
     </div>
   </section>
 
@@ -37,22 +58,22 @@ import CTA from '../components/CTA.astro';
         <div class="text-center">
           <div class="text-4xl mb-4">1️⃣</div>
           <h3 class="text-xl font-bold mb-2">Audit & Stratégie</h3>
-          <p class="opacity-80">Analyse de vos besoins et objectifs</p>
+          <p class="opacity-80">Analyse des besoins, du positionnement et des objectifs du projet.</p>
         </div>
         <div class="text-center">
           <div class="text-4xl mb-4">2️⃣</div>
           <h3 class="text-xl font-bold mb-2">Design & Prototype</h3>
-          <p class="opacity-80">Création de maquettes interactives</p>
+          <p class="opacity-80">Création d’une interface claire, moderne et orientée utilisateur.</p>
         </div>
         <div class="text-center">
           <div class="text-4xl mb-4">3️⃣</div>
           <h3 class="text-xl font-bold mb-2">Développement</h3>
-          <p class="opacity-80">Codage et intégration technique</p>
+          <p class="opacity-80">Intégration technique, optimisation des performances et responsive design.</p>
         </div>
         <div class="text-center">
           <div class="text-4xl mb-4">4️⃣</div>
-          <h3 class="text-xl font-bold mb-2">Livraison & Support</h3>
-          <p class="opacity-80">Mise en ligne et maintenance</p>
+          <h3 class="text-xl font-bold mb-2">Livraison & Suivi</h3>
+          <p class="opacity-80">Mise en ligne, accompagnement et conseils pour la suite.</p>
         </div>
       </div>
     </div>

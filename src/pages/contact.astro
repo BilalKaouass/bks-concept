@@ -4,7 +4,11 @@ import ContactComponent from '../components/Contact.astro';
 import CTA from '../components/CTA.astro';
 ---
 
-<Layout>
+<Layout
+  title="Contact | Demander un devis pour votre site web | BKS Concept"
+  description="Contactez BKS Concept pour la création de votre site vitrine, e-commerce, application web ou refonte de site. Réponse sous 24h, devis gratuit, basé à Charleroi."
+  canonical="https://bksconcept.netlify.app/contact"
+>
   <!-- Hero pour la page contact -->
   <section class="hero min-h-[50vh] bg-gradient-to-br from-primary/10 to-secondary/10">
     <div class="hero-content text-center">
@@ -13,28 +17,44 @@ import CTA from '../components/CTA.astro';
           Contactez <span class="text-gradient">BKS Concept</span>
         </h1>
         <p class="text-xl md:text-2xl opacity-80 mb-10 max-w-3xl mx-auto">
-          Discutons de votre projet. Réponse sous 24h garantie.
+          Discutons de votre projet web. Réponse rapide, devis gratuit et accompagnement personnalisé.
         </p>
         <div class="stats stats-vertical lg:stats-horizontal shadow bg-base-100 w-full max-w-3xl mx-auto">
-  <div class="stat">
-    <div class="stat-title text-sm md:text-base">Temps de réponse</div>
-    <div class="stat-value text-primary text-xl sm:text-2xl md:text-3xl">24h</div>
-    <div class="stat-desc text-xs sm:text-sm">Garanti</div>
-  </div>
-  
-  <div class="stat">
-    <div class="stat-title text-sm md:text-base">Support</div>
-    <div class="stat-value text-secondary text-xl sm:text-2xl md:text-3xl">7j/7</div>
-    <div class="stat-desc text-xs sm:text-sm">Disponible</div>
-  </div>
-  
-  <div class="stat">
-    <div class="stat-title text-sm md:text-base">Devis</div>
-    <div class="stat-value text-accent text-xl sm:text-2xl md:text-3xl">Gratuit</div>
-    <div class="stat-desc text-xs sm:text-sm">Sans engagement</div>
-  </div>
-</div>
+          <div class="stat">
+            <div class="stat-title text-sm md:text-base">Temps de réponse</div>
+            <div class="stat-value text-primary text-xl sm:text-2xl md:text-3xl">24h</div>
+            <div class="stat-desc text-xs sm:text-sm">En moyenne</div>
+          </div>
+          
+          <div class="stat">
+            <div class="stat-title text-sm md:text-base">Support</div>
+            <div class="stat-value text-secondary text-xl sm:text-2xl md:text-3xl">7j/7</div>
+            <div class="stat-desc text-xs sm:text-sm">Selon le projet</div>
+          </div>
+          
+          <div class="stat">
+            <div class="stat-title text-sm md:text-base">Devis</div>
+            <div class="stat-value text-accent text-xl sm:text-2xl md:text-3xl">Gratuit</div>
+            <div class="stat-desc text-xs sm:text-sm">Sans engagement</div>
+          </div>
+        </div>
       </div>
+    </div>
+  </section>
+
+  <!-- Intro SEO -->
+  <section class="py-16">
+    <div class="container mx-auto px-4 max-w-4xl text-center">
+      <h2 class="text-3xl md:text-4xl font-bold mb-6">
+        Parlez-nous de votre projet digital
+      </h2>
+      <p class="text-lg opacity-80 mb-4">
+        Vous cherchez un partenaire pour créer un site vitrine, une boutique en ligne, une application web ou moderniser un site existant ?
+        BKS Concept vous accompagne avec une approche claire, humaine et orientée résultats.
+      </p>
+      <p class="text-lg opacity-80">
+        Basé à Charleroi, nous travaillons avec des clients en Belgique, en France et à distance.
+      </p>
     </div>
   </section>
 
@@ -56,21 +76,21 @@ import CTA from '../components/CTA.astro';
               <a href="mailto:contact@bksconcept.fr" class="link link-primary">
                 bksconcept@gmail.com
               </a>
-              <p class="text-sm opacity-80 mt-2">Réponse sous 24h</p>
+              <p class="text-sm opacity-80 mt-2">Réponse rapide par email</p>
             </div>
             <div class="flex flex-col items-center p-6">
               <div class="text-5xl mb-4">📱</div>
               <h3 class="text-xl font-bold mb-2">Téléphone</h3>
               <a href="tel:+32484243646" class="link link-primary">
-  +32 4 84 24 36 46
-</a>
+                +32 4 84 24 36 46
+              </a>
               <p class="text-sm opacity-80 mt-2">Lun-Ven, 9h-18h</p>
             </div>
             <div class="flex flex-col items-center p-6">
               <div class="text-5xl mb-4">💼</div>
               <h3 class="text-xl font-bold mb-2">Rendez-vous</h3>
               <p class="opacity-80">Visio ou présentiel</p>
-              <p class="text-sm opacity-80 mt-2">Wallonie</p>
+              <p class="text-sm opacity-80 mt-2">Charleroi, Wallonie, Belgique</p>
             </div>
           </div>
         </div>

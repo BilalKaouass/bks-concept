@@ -4,21 +4,42 @@ import ServicesComponent from '../components/Services.astro';
 import CTA from '../components/CTA.astro';
 ---
 
-<Layout>
+<Layout
+  title="Services web à Charleroi | Site vitrine, e-commerce, refonte | BKS Concept"
+  description="Découvrez les services web de BKS Concept à Charleroi : création de site vitrine, e-commerce, application web, refonte, SEO de base et accompagnement digital sur mesure."
+  canonical="https://bksconcept.netlify.app/services"
+>
   <!-- Hero Services -->
   <section class="hero min-h-[50vh] bg-gradient-to-br from-primary/10 to-secondary/10">
     <div class="hero-content text-center">
       <div class="max-w-4xl">
         <h1 class="text-5xl md:text-6xl font-bold mb-6">
-          Nos <span class="text-gradient">Services</span>
+          Nos <span class="text-gradient">Services Web</span>
         </h1>
         <p class="text-xl md:text-2xl opacity-80 mb-10 max-w-3xl mx-auto">
-          Des solutions digitales complètes pour transformer votre vision en réalité
+          Des solutions digitales sur mesure pour créer un site web professionnel, performant et pensé pour convertir.
         </p>
         <div class="alert bg-base-100 shadow-lg">
-          <span>🎯 <strong>Objectif :</strong> Créer l'expérience digitale parfaite pour votre business</span>
+          <span>🎯 <strong>Notre objectif :</strong> concevoir une expérience digitale claire, crédible et efficace pour votre activité.</span>
         </div>
       </div>
+    </div>
+  </section>
+
+  <!-- Intro SEO -->
+  <section class="py-16">
+    <div class="container mx-auto px-4 max-w-4xl text-center">
+      <h2 class="text-3xl md:text-4xl font-bold mb-6">
+        Création de site web à Charleroi et en Belgique
+      </h2>
+      <p class="text-lg opacity-80 mb-4">
+        BKS Concept accompagne les indépendants, PME, marques et porteurs de projet dans la création de sites web modernes,
+        rapides et orientés résultats.
+      </p>
+      <p class="text-lg opacity-80">
+        Nous intervenons sur la création de site vitrine, le développement e-commerce, les applications web et la refonte de sites existants,
+        avec une attention particulière portée au design, à l’expérience utilisateur et à la visibilité en ligne.
+      </p>
     </div>
   </section>
 
@@ -28,21 +49,24 @@ import CTA from '../components/CTA.astro';
   <!-- Pricing -->
   <section class="py-20 bg-base-200">
     <div class="container mx-auto px-4">
-      <h2 class="text-4xl font-bold text-center mb-12">Tarifs Transparents</h2>
+      <h2 class="text-4xl font-bold text-center mb-12">Des prestations adaptées à votre projet</h2>
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
         <div class="card bg-base-100 shadow-xl">
           <div class="card-body p-8">
             <h3 class="card-title text-2xl mb-4">Site Vitrine</h3>
             <div class="text-4xl font-bold text-primary mb-4">Sur devis</div>
+            <p class="opacity-80 mb-4">
+              Idéal pour présenter votre activité, rassurer vos prospects et générer des demandes de contact.
+            </p>
             <ul class="space-y-3 mb-6">
               <li class="flex items-center">✓ Design personnalisé</li>
               <li class="flex items-center">✓ Responsive mobile</li>
               <li class="flex items-center">✓ SEO de base</li>
-              <li class="flex items-center">✓ 5 pages</li>
-              <li class="flex items-center">✓ Hébergement 1 an</li>
+              <li class="flex items-center">✓ Jusqu’à 5 pages</li>
+              <li class="flex items-center">✓ Mise en ligne</li>
             </ul>
             <div class="card-actions">
-              <a href="/contact" class="btn btn-primary w-full">Choisir ce plan</a>
+              <a href="/contact" class="btn btn-primary w-full">Demander un devis</a>
             </div>
           </div>
         </div>
@@ -52,12 +76,15 @@ import CTA from '../components/CTA.astro';
             <div class="badge badge-primary badge-lg mb-4">POPULAIRE</div>
             <h3 class="card-title text-2xl mb-4">E-commerce</h3>
             <div class="text-4xl font-bold text-primary mb-4">Sur devis</div>
+            <p class="opacity-80 mb-4">
+              Une boutique en ligne pensée pour vendre, rassurer et simplifier le parcours d’achat.
+            </p>
             <ul class="space-y-3 mb-6">
               <li class="flex items-center">✓ Catalogue produits</li>
               <li class="flex items-center">✓ Paiement sécurisé</li>
               <li class="flex items-center">✓ Gestion des stocks</li>
               <li class="flex items-center">✓ Panier utilisateur</li>
-              <li class="flex items-center">✓ Support 7j/7</li>
+              <li class="flex items-center">✓ Support et accompagnement</li>
             </ul>
             <div class="card-actions">
               <a href="/contact" class="btn btn-primary w-full">Choisir ce plan</a>
@@ -69,16 +96,45 @@ import CTA from '../components/CTA.astro';
           <div class="card-body p-8">
             <h3 class="card-title text-2xl mb-4">Application Web</h3>
             <div class="text-4xl font-bold text-primary mb-4">Sur devis</div>
+            <p class="opacity-80 mb-4">
+              Pour les besoins spécifiques : espace client, outil métier, plateforme interne ou service digital sur mesure.
+            </p>
             <ul class="space-y-3 mb-6">
               <li class="flex items-center">✓ Développement sur mesure</li>
               <li class="flex items-center">✓ Base de données</li>
               <li class="flex items-center">✓ API personnalisée</li>
               <li class="flex items-center">✓ Interface admin</li>
-              <li class="flex items-center">✓ Maintenance incluse</li>
+              <li class="flex items-center">✓ Maintenance possible</li>
             </ul>
             <div class="card-actions">
               <a href="/contact" class="btn btn-outline w-full">Demander un devis</a>
             </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Bloc SEO complémentaire -->
+  <section class="py-16">
+    <div class="container mx-auto px-4 max-w-4xl">
+      <h2 class="text-3xl font-bold mb-6 text-center">Pourquoi choisir BKS Concept ?</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div class="card bg-base-200 shadow-lg">
+          <div class="card-body">
+            <h3 class="text-2xl font-bold mb-3">Une approche orientée business</h3>
+            <p class="opacity-80">
+              Nous ne créons pas seulement un beau site. Nous construisons un support digital pensé pour inspirer confiance,
+              clarifier votre offre et améliorer votre conversion.
+            </p>
+          </div>
+        </div>
+        <div class="card bg-base-200 shadow-lg">
+          <div class="card-body">
+            <h3 class="text-2xl font-bold mb-3">Un accompagnement humain</h3>
+            <p class="opacity-80">
+              Chaque projet est suivi avec sérieux, transparence et réactivité, de la phase de cadrage jusqu’à la mise en ligne.
+            </p>
           </div>
         </div>
       </div>
