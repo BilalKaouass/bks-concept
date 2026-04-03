@@ -2,14 +2,33 @@
 import Layout from '../layouts/Layout.astro';
 import ServicesComponent from '../components/Services.astro';
 import CTA from '../components/CTA.astro';
+
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    {
+      '@type': 'ListItem',
+      position: 1,
+      name: 'Accueil',
+      item: 'https://bksconcept.netlify.app/'
+    },
+    {
+      '@type': 'ListItem',
+      position: 2,
+      name: 'Services',
+      item: 'https://bksconcept.netlify.app/services'
+    }
+  ]
+};
 ---
 
 <Layout
   title="Services web à Charleroi | Site vitrine, e-commerce, refonte | BKS Concept"
   description="Découvrez les services web de BKS Concept à Charleroi : création de site vitrine, e-commerce, application web, refonte, SEO de base et accompagnement digital sur mesure."
   canonical="https://bksconcept.netlify.app/services"
+  schema={breadcrumbSchema}
 >
-  <!-- Hero Services -->
   <section class="hero min-h-[50vh] bg-gradient-to-br from-primary/10 to-secondary/10">
     <div class="hero-content text-center">
       <div class="max-w-4xl">
@@ -26,7 +45,6 @@ import CTA from '../components/CTA.astro';
     </div>
   </section>
 
-  <!-- Intro SEO -->
   <section class="py-16">
     <div class="container mx-auto px-4 max-w-4xl text-center">
       <h2 class="text-3xl md:text-4xl font-bold mb-6">
@@ -43,10 +61,8 @@ import CTA from '../components/CTA.astro';
     </div>
   </section>
 
-  <!-- Composant services -->
   <ServicesComponent />
   
-  <!-- Pricing -->
   <section class="py-20 bg-base-200">
     <div class="container mx-auto px-4">
       <h2 class="text-4xl font-bold text-center mb-12">Des prestations adaptées à votre projet</h2>
@@ -115,7 +131,6 @@ import CTA from '../components/CTA.astro';
     </div>
   </section>
 
-  <!-- Bloc SEO complémentaire -->
   <section class="py-16">
     <div class="container mx-auto px-4 max-w-4xl">
       <h2 class="text-3xl font-bold mb-6 text-center">Pourquoi choisir BKS Concept ?</h2>

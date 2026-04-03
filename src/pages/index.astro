@@ -7,12 +7,21 @@ import Portfolio from '../components/Portfolio.astro';
 import Testimonials from '../components/Testimonials.astro';
 import Contact from '../components/Contact.astro';
 import CTA from '../components/CTA.astro';
+
+const websiteSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  name: 'BKS Concept',
+  url: 'https://bksconcept.netlify.app/',
+  inLanguage: 'fr-BE'
+};
 ---
 
 <Layout
   title="Création de site web à Charleroi | BKS Concept"
   description="BKS Concept crée des sites web professionnels à Charleroi : site vitrine, e-commerce, refonte et présence en ligne moderne pour indépendants, entreprises et marques."
   canonical="https://bksconcept.netlify.app/"
+  schema={websiteSchema}
 >
   <PageLoader />
   <Hero />

@@ -2,14 +2,33 @@
 import Layout from '../layouts/Layout.astro';
 import PortfolioComponent from '../components/Portfolio.astro';
 import CTA from '../components/CTA.astro';
+
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    {
+      '@type': 'ListItem',
+      position: 1,
+      name: 'Accueil',
+      item: 'https://bksconcept.netlify.app/'
+    },
+    {
+      '@type': 'ListItem',
+      position: 2,
+      name: 'Portfolio',
+      item: 'https://bksconcept.netlify.app/portfolio'
+    }
+  ]
+};
 ---
 
 <Layout
   title="Portfolio web | Réalisations de sites professionnels | BKS Concept"
   description="Découvrez le portfolio de BKS Concept : créations de sites vitrines, projets e-commerce et réalisations web modernes conçues pour renforcer l’image de marque et convertir."
   canonical="https://bksconcept.netlify.app/portfolio"
+  schema={breadcrumbSchema}
 >
-  <!-- Hero Portfolio -->
   <section class="hero min-h-[50vh] bg-gradient-to-br from-base-100 to-base-200">
     <div class="hero-content text-center">
       <div class="max-w-4xl">
@@ -30,7 +49,6 @@ import CTA from '../components/CTA.astro';
     </div>
   </section>
 
-  <!-- Intro SEO -->
   <section class="py-16">
     <div class="container mx-auto px-4 max-w-4xl text-center">
       <h2 class="text-3xl md:text-4xl font-bold mb-6">
@@ -47,10 +65,8 @@ import CTA from '../components/CTA.astro';
     </div>
   </section>
 
-  <!-- Composant portfolio -->
   <PortfolioComponent />
   
-  <!-- Processus -->
   <section class="py-20 bg-base-200">
     <div class="container mx-auto px-4">
       <h2 class="text-4xl font-bold text-center mb-12">Notre Processus Créatif</h2>

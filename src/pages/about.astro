@@ -1,14 +1,33 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import CTA from '../components/CTA.astro';
+
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    {
+      '@type': 'ListItem',
+      position: 1,
+      name: 'Accueil',
+      item: 'https://bksconcept.netlify.app/'
+    },
+    {
+      '@type': 'ListItem',
+      position: 2,
+      name: 'À propos',
+      item: 'https://bksconcept.netlify.app/about'
+    }
+  ]
+};
 ---
 
 <Layout
   title="À propos | BKS Concept, création de site web à Charleroi"
   description="Découvrez BKS Concept, son fondateur et sa vision : concevoir des sites web professionnels, performants et orientés résultats pour les entreprises en Belgique et à distance."
   canonical="https://bksconcept.netlify.app/about"
+  schema={breadcrumbSchema}
 >
-  <!-- Hero About -->
   <section class="hero min-h-[60vh] bg-gradient-to-br from-base-100 to-base-200">
     <div class="hero-content text-center">
       <div class="max-w-4xl">
@@ -22,7 +41,6 @@ import CTA from '../components/CTA.astro';
     </div>
   </section>
 
-  <!-- Notre histoire -->
   <section class="py-20">
     <div class="container mx-auto px-4">
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -93,7 +111,6 @@ import CTA from '../components/CTA.astro';
     </div>
   </section>
 
-  <!-- Équipe - Bilal.K -->
   <section class="py-20 bg-base-200">
     <div class="container mx-auto px-4">
       <h2 class="text-4xl font-bold text-center mb-12">Le fondateur de BKS Concept</h2>
